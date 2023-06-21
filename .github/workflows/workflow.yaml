@@ -20,6 +20,3 @@ jobs:
       - name: Sync .py files with S3
         run: |
           aws s3 sync . s3://test212334 --exclude "*" --include "*.py" --delete
-
-
-#dfnduv
