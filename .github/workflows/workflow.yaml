@@ -1,4 +1,4 @@
-name: Deploy Blog
+name: Sync S3 with GitHub
 
 on:
   push:
@@ -6,31 +6,17 @@ on:
       - main
 
 jobs:
-  build:
+  sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 12
-      - name: Install dependencies
-        working-directory: ./.github/workflows
-        run: yarn install
-      - name: Run Lint
-        working-directory: ./.github/workflows
-        run: eslint --ext .json --ignore-pattern public .
-      - name: Build
-        working-directory: ./.github/workflows
-        run: yarn run build
-      - name: Set AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: eu-west-1
-      - name: Deploy to S3
-        working-directory: ./.github/workflows
-        run: yarn run deploy
-#dvd
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Install AWS CLI
+        run: |
+          pip install awscli
+      
+      - name: Sync .py files with S3
+        run: |
+          aws s3 sync . s3://test212334 --exclude "*" --include "*.py" --delete
