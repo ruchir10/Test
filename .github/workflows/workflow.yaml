@@ -17,16 +17,16 @@ jobs:
         run: |
           pip install awscli
       
-      - name: Create S3 Bucket
-        run: |
-          aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws s3api create-bucket --bucket my-new-bucket --region us-west-2 --create-bucket-configuration LocationConstraint=us-west-2
+      #- name: Create S3 Bucket
+        # run: |
+        #   aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
+        #   aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        #   aws s3api create-bucket --bucket my-new-bucket --region us-west-2 --create-bucket-configuration LocationConstraint=us-west-2
       
       - name: Sync .py files with S3
         run: |
           aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws s3 sync . s3://my-new-bucket --exclude "*" --include "*.py" --delete
+          aws s3 sync . s3://my-new-bucket --exclude "*" --include "*" --delete
 
       
