@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -26,10 +27,13 @@ jobs:
             ${{ runner.os }}-gatsby-alexhyett-site-build-
       - name: Install dependencies
         run: yarn install
+        working-directory: Test
       - name: Run Lint
         run: yarn run lint
+        working-directory: Test
       - name: Build
         run: yarn run build
+        working-directory: Test
       - name: Set AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -38,3 +42,4 @@ jobs:
           aws-region: eu-west-1
       - name: Deploy to S3
         run: yarn run deploy
+        working-directory: Test
