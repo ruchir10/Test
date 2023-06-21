@@ -19,6 +19,6 @@ jobs:
       
       - name: Sync .py files with S3
         run: |
-          aws configure set aws_access_key_id AKIA5PK4LZMFUQOILKKE
-          aws configure set aws_secret_access_key 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
+          aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws s3 sync . s3://test212334 --exclude "*" --include "*.py" --delete
