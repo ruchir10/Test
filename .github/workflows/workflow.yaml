@@ -21,7 +21,7 @@ jobs:
         run: |
           aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws s3api create-bucket --bucket my-new-bucket --region Asia Pacific (Mumbai) ap-south-1
+          aws s3api create-bucket --bucket my-new-bucket --region ap-south-1
       
       - name: Sync .py files with S3
         run: |
