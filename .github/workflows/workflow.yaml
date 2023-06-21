@@ -16,11 +16,14 @@ jobs:
         with:
           node-version: 12
       - name: Install dependencies
-        run: cd .github/workflows && yarn install
+        working-directory: ./.github/workflows
+        run: yarn install
       - name: Run Lint
-        run: cd .github/workflows && eslint --ext .js,.jsx --ignore-pattern public .
+        working-directory: ./.github/workflows
+        run: eslint --ext .js,.jsx --ignore-pattern public .
       - name: Build
-        run: cd .github/workflows && yarn run build
+        working-directory: ./.github/workflows
+        run: yarn run build
       - name: Set AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -28,5 +31,5 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: eu-west-1
       - name: Deploy to S3
-        run: cd .github/workflows && yarn run deploy
-#ds
+        working-directory: ./.github/workflows
+        run: yarn run deploy
