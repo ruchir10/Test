@@ -27,15 +27,15 @@ jobs:
             ${{ runner.os }}-gatsby-alexhyett-site-build-
       - name: Install dependencies
         run: |
-          cd Test
+          cd ${{ github.workspace }}/Test
           yarn install
       - name: Run Lint
         run: |
-          cd Test
+          cd ${{ github.workspace }}/Test
           yarn run lint
       - name: Build
         run: |
-          cd Test
+          cd ${{ github.workspace }}/Test
           yarn run build
       - name: Set AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -45,5 +45,5 @@ jobs:
           aws-region: eu-west-1
       - name: Deploy to S3
         run: |
-          cd Test
+          cd ${{ github.workspace }}/Test
           yarn run deploy
