@@ -11,32 +11,19 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
         with:
           node-version: 12
-      - name: Caching Gatsby
-        id: gatsby-cache-build
-        uses: actions/cache@v2
-        with:
-          path: |
-            public
-            .cache
-            node_modules
-          key: ${{ runner.os }}-gatsby-alexhyett-site-build-${{ github.run_id }}
-          restore-keys: |
-            ${{ runner.os }}-gatsby-alexhyett-site-build-
       - name: Install dependencies
-        run: |
-          cd ${{ github.workspace }}/Test
-          yarn install
+        run: yarn install
+        working-directory: Test
       - name: Run Lint
-        run: |
-          cd ${{ github.workspace }}/Test
-          yarn run lint
+        run: yarn run lint
+        working-directory: Test
       - name: Build
-        run: |
-          cd ${{ github.workspace }}/Test
-          yarn run build
+        run: yarn run build
+        working-directory: Test
       - name: Set AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -44,6 +31,5 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: eu-west-1
       - name: Deploy to S3
-        run: |
-          cd ${{ github.workspace }}/Test
-          yarn run deploy
+        run: yarn run deploy
+        working-directory: Test
