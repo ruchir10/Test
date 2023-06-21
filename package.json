@@ -7,3 +7,5 @@
     "deploy": "gatsby-plugin-s3 deploy --yes && export AWS_PAGER=\"\" && aws cloudfront create-invalidation --distribution-id E5FDMTLPHUTLTL --paths '/*'"
   }
   
+
+  #dvvdvnd
