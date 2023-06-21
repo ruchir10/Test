@@ -20,7 +20,7 @@ jobs:
         run: yarn install
       - name: Run Lint
         working-directory: ./.github/workflows
-        run: eslint --ext .js,.jsx --ignore-pattern public .
+        run: eslint --ext .json --ignore-pattern public .
       - name: Build
         working-directory: ./.github/workflows
         run: yarn run build
