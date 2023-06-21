@@ -18,7 +18,7 @@ jobs:
       - name: Install dependencies
         run: cd .github/workflows && yarn install
       - name: Run Lint
-        run: cd .github/workflows && yarn run lint
+        run: cd .github/workflows && eslint --ext .js,.jsx --ignore-pattern public .
       - name: Build
         run: cd .github/workflows && yarn run build
       - name: Set AWS credentials
@@ -29,5 +29,3 @@ jobs:
           aws-region: eu-west-1
       - name: Deploy to S3
         run: cd .github/workflows && yarn run deploy
-
-        #xs
