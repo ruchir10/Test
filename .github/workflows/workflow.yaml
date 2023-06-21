@@ -26,11 +26,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gatsby-alexhyett-site-build-
       - name: Install dependencies
-        run: cd Test && yarn install
+        run: cd ${{ github.workspace }}/Test && yarn install
       - name: Run Lint
-        run: cd Test && yarn run lint
+        run: cd ${{ github.workspace }}/Test && yarn run lint
       - name: Build
-        run: cd Test && yarn run build
+        run: cd ${{ github.workspace }}/Test && yarn run build
       - name: Set AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -38,4 +38,4 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: eu-west-1
       - name: Deploy to S3
-        run: cd Test && yarn run deploy
+        run: cd ${{ github.workspace }}/Test && yarn run deploy
