@@ -8,17 +8,28 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
-
+    
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
+      
       - name: Install AWS CLI
         run: |
           pip install awscli
-
+      
+      - name: Create S3 Bucket
+        run: |
+          aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws s3api create-bucket --bucket my-new-bucket1 --region us-west-2 --create-bucket-configuration LocationConstraint=us-west-2
+      
       - name: Sync .py files with S3
         run: |
           aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws s3 sync . s3://my-new-bucket --include "*.*" --delete
+
+     # - name: Execute file.py
+      #  run: |
+             
+     
