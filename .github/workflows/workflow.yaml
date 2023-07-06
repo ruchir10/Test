@@ -8,36 +8,25 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      
+
       - name: Install AWS CLI
         run: |
           pip install awscli
-      
-      - name: Determine Bucket Name
-        id: bucket_name
-        run: |
-          bucket_exists=$(aws s3api head-bucket --bucket testaws 2>&1)
-          if [[ $bucket_exists == *"Not Found"* ]]; then
-            echo "BucketName=testaws"
-          else
-            echo "BucketName=test212334"
-          fi
-      
+
       - name: Create S3 Bucket
-        id: create_bucket
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
-          if [[ ${{ steps.bucket_name.outputs.BucketName }} == "test212334" ]]; then
-            aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
-            aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-            aws s3api create-bucket --bucket test212334 --region ap-south-1 --create-bucket-configuration LocationConstraint=ap-south-1
-          fi
-      
+          aws s3api create-bucket --bucket bucket123 --region ap-south-1 --create-bucket-configuration LocationConstraint=ap-south-1
+
       - name: Sync .py files with S3
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
-          aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws s3 sync . "s3://${{ steps.bucket_name.outputs.BucketName }}" --include "*.py" --delete
+          aws s3 sync . "s3://bucket123" --include "*.py" --delete
