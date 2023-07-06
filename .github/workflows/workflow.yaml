@@ -27,7 +27,7 @@ jobs:
 
 
   TerraformToTeam:
-    runs-on: CAI-Enterprise
+    runs-on: self-hosted
     environment: Team
     env:
       TARGET: team
@@ -51,7 +51,7 @@ jobs:
           ENVIRONMENT: ${{ env.TARGET }}
 
   TerraformToInteg:
-    runs-on: CAI-Enterprise
+    runs-on: self-hosted
     environment: Integ
     env:
       TARGET: integ
@@ -75,7 +75,7 @@ jobs:
           ENVIRONMENT: ${{ env.TARGET }}
 
   TerraformToProd:
-    runs-on: CAI-Enterprise
+    runs-on: self-hosted
     environment: Production
     env:
       TARGET: prod
