@@ -1,0 +1,9 @@
+﻿{
+  "agentId": 22,
+  "agentName": "Team",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelines.actions.githubusercontent.com/P5jhKlOA66ytK8yODlNmZhDVC0nW8GS9I4LCaUyN7hdifp9YPL",
+  "gitHubUrl": "https://github.com/ruchir10/Test",
+  "workFolder": "_work"
+}

@@ -1,0 +1,189 @@
+[2023-07-06 10:01:10Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2023-07-06 10:01:10Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 10:01:10Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 10:01:10Z INFO HostContext] Well known config file 'Credentials': 'C:\Test\actions-runner\.credentials'
+[2023-07-06 10:01:10Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 10:01:10Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 10:01:10Z INFO HostContext] Well known config file 'Runner': 'C:\Test\actions-runner\.runner'
+[2023-07-06 10:01:10Z INFO Listener] Runner is built for Windows (X64) - win-x64.
+[2023-07-06 10:01:10Z INFO Listener] RuntimeInformation: Microsoft Windows 10.0.22621.
+[2023-07-06 10:01:10Z INFO Listener] Version: 2.305.0
+[2023-07-06 10:01:10Z INFO Listener] Commit: 6cbe663c239dba8a109c6ac2801b25f1ed7c51e9
+[2023-07-06 10:01:10Z INFO Listener] Culture: en-US
+[2023-07-06 10:01:10Z INFO Listener] UI Culture: en-US
+[2023-07-06 10:01:10Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 10:01:10Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 10:01:10Z INFO Listener] Validating directory permissions for: 'C:\Test\actions-runner'
+[2023-07-06 10:01:10Z INFO CommandLineParser] Parse
+[2023-07-06 10:01:10Z INFO CommandLineParser] Parsing 5 args
+[2023-07-06 10:01:10Z INFO CommandLineParser] parsing argument
+[2023-07-06 10:01:10Z INFO CommandLineParser] HasArgs: False
+[2023-07-06 10:01:10Z INFO CommandLineParser] Adding Command: configure
+[2023-07-06 10:01:10Z INFO CommandLineParser] parsing argument
+[2023-07-06 10:01:10Z INFO CommandLineParser] HasArgs: True
+[2023-07-06 10:01:10Z INFO CommandLineParser] arg: url
+[2023-07-06 10:01:10Z INFO CommandLineParser] parsing argument
+[2023-07-06 10:01:10Z INFO CommandLineParser] HasArgs: True
+[2023-07-06 10:01:10Z INFO CommandLineParser] Adding option 'url': 'https://github.com/ruchir10/Test'
+[2023-07-06 10:01:10Z INFO CommandLineParser] parsing argument
+[2023-07-06 10:01:10Z INFO CommandLineParser] HasArgs: True
+[2023-07-06 10:01:10Z INFO CommandLineParser] arg: token
+[2023-07-06 10:01:10Z INFO CommandLineParser] parsing argument
+[2023-07-06 10:01:10Z INFO CommandLineParser] HasArgs: True
+[2023-07-06 10:01:10Z INFO CommandLineParser] Adding option 'token': '***'
+[2023-07-06 10:01:10Z INFO Listener] Arguments parsed
+[2023-07-06 10:01:10Z INFO Runner] ExecuteCommand
+[2023-07-06 10:01:10Z INFO ConfigurationStore] currentAssemblyLocation: C:\Test\actions-runner\bin\Runner.Listener.dll
+[2023-07-06 10:01:10Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 10:01:10Z INFO ConfigurationStore] binPath: C:\Test\actions-runner\bin
+[2023-07-06 10:01:10Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 10:01:10Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 10:01:10Z INFO ConfigurationStore] RootFolder: C:\Test\actions-runner
+[2023-07-06 10:01:10Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 10:01:10Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 10:01:10Z INFO HostContext] Well known config file 'Runner': 'C:\Test\actions-runner\.runner'
+[2023-07-06 10:01:10Z INFO ConfigurationStore] ConfigFilePath: C:\Test\actions-runner\.runner
+[2023-07-06 10:01:10Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 10:01:10Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 10:01:10Z INFO HostContext] Well known config file 'Credentials': 'C:\Test\actions-runner\.credentials'
+[2023-07-06 10:01:10Z INFO ConfigurationStore] CredFilePath: C:\Test\actions-runner\.credentials
+[2023-07-06 10:01:10Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 10:01:10Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 10:01:10Z INFO HostContext] Well known config file 'MigratedCredentials': 'C:\Test\actions-runner\.credentials_migrated'
+[2023-07-06 10:01:10Z INFO ConfigurationStore] MigratedCredFilePath: C:\Test\actions-runner\.credentials_migrated
+[2023-07-06 10:01:10Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 10:01:10Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 10:01:10Z INFO HostContext] Well known config file 'Service': 'C:\Test\actions-runner\.service'
+[2023-07-06 10:01:10Z INFO ConfigurationStore] ServiceConfigFilePath: C:\Test\actions-runner\.service
+[2023-07-06 10:01:10Z INFO CommandSettings] Flag 'help': 'False'
+[2023-07-06 10:01:10Z INFO CommandSettings] Flag 'version': 'False'
+[2023-07-06 10:01:10Z INFO CommandSettings] Flag 'commit': 'False'
+[2023-07-06 10:01:10Z INFO CommandSettings] Flag 'check': 'False'
+[2023-07-06 10:01:10Z INFO CommandSettings] Command 'configure': 'True'
+[2023-07-06 10:01:10Z INFO Terminal] WRITE LINE: 
+[2023-07-06 10:01:10Z INFO Terminal] WRITE LINE: --------------------------------------------------------------------------------
+[2023-07-06 10:01:10Z INFO Terminal] WRITE LINE: |        ____ _ _   _   _       _          _        _   _                      |
+[2023-07-06 10:01:10Z INFO Terminal] WRITE LINE: |       / ___(_) |_| | | |_   _| |__      / \   ___| |_(_) ___  _ __  ___      |
+[2023-07-06 10:01:10Z INFO Terminal] WRITE LINE: |      | |  _| | __| |_| | | | | '_ \    / _ \ / __| __| |/ _ \| '_ \/ __|     |
+[2023-07-06 10:01:10Z INFO Terminal] WRITE LINE: |      | |_| | | |_|  _  | |_| | |_) |  / ___ \ (__| |_| | (_) | | | \__ \     |
+[2023-07-06 10:01:10Z INFO Terminal] WRITE LINE: |       \____|_|\__|_| |_|\__,_|_.__/  /_/   \_\___|\__|_|\___/|_| |_|___/     |
+[2023-07-06 10:01:10Z INFO Terminal] WRITE LINE: |                                                                              |
+[2023-07-06 10:01:10Z INFO Terminal] WRITE: |                       
+[2023-07-06 10:01:10Z INFO Terminal] WRITE: Self-hosted runner registration
+[2023-07-06 10:01:10Z INFO Terminal] WRITE LINE:                         |
+[2023-07-06 10:01:10Z INFO Terminal] WRITE LINE: |                                                                              |
+[2023-07-06 10:01:10Z INFO Terminal] WRITE LINE: --------------------------------------------------------------------------------
+[2023-07-06 10:01:10Z INFO ConfigurationManager] ConfigureAsync
+[2023-07-06 10:01:10Z INFO CommandSettings] Flag 'generateServiceConfig': 'False'
+[2023-07-06 10:01:10Z INFO ConfigurationStore] IsConfigured()
+[2023-07-06 10:01:10Z INFO ConfigurationStore] IsConfigured: False
+[2023-07-06 10:01:10Z INFO ConfigurationManager] Is configured: False
+[2023-07-06 10:01:10Z INFO CommandSettings] Arg 'url': 'https://github.com/ruchir10/Test'
+[2023-07-06 10:01:10Z INFO CommandSettings] Remove url from Arg dictionary.
+[2023-07-06 10:01:10Z INFO CommandSettings] Arg 'token': '***'
+[2023-07-06 10:01:10Z INFO CommandSettings] Remove token from Arg dictionary.
+[2023-07-06 10:01:10Z INFO ConfigurationManager] Http response code: OK from 'POST https://api.github.com/actions/runner-registration' (E4BF:34578C:3594B3:3A35E9:64A690E6)
+[2023-07-06 10:01:10Z INFO ConfigurationManager] Using V2 flow: False
+[2023-07-06 10:01:10Z INFO ConfigurationManager] cred retrieved via GitHub auth
+[2023-07-06 10:01:10Z INFO RunnerServer] EstablishVssConnection
+[2023-07-06 10:01:10Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2023-07-06 10:01:10Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-06 10:01:10Z INFO RunnerServer] EstablishVssConnection
+[2023-07-06 10:01:10Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2023-07-06 10:01:10Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-06 10:01:10Z INFO RunnerServer] EstablishVssConnection
+[2023-07-06 10:01:10Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2023-07-06 10:01:10Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-06 10:01:12Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-06 10:01:12Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-06 10:01:12Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-06 10:01:12Z INFO Terminal] WRITE LINE: 
+[2023-07-06 10:01:12Z INFO ConfigurationManager] Test Connection complete.
+[2023-07-06 10:01:12Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 10:01:12Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 10:01:12Z INFO HostContext] Well known config file 'RSACredentials': 'C:\Test\actions-runner\.credentials_rsaparams'
+[2023-07-06 10:01:12Z INFO RSAEncryptedFileKeyManager] Creating new RSA key using 2048-bit key length
+[2023-07-06 10:01:13Z INFO RSAEncryptedFileKeyManager] Successfully saved RSA key parameters to file C:\Test\actions-runner\.credentials_rsaparams
+[2023-07-06 10:01:13Z INFO CommandSettings] Arg 'runnergroup': ''
+[2023-07-06 10:01:13Z INFO CommandSettings] Flag 'unattended': 'False'
+[2023-07-06 10:01:13Z INFO PromptManager] ReadValue
+[2023-07-06 10:01:13Z INFO Terminal] WRITE: Enter the name of the runner group to add this runner to: 
+[2023-07-06 10:01:13Z INFO Terminal] WRITE: [press Enter for Default] 
+[2023-07-06 10:01:13Z INFO Terminal] READ LINE
+[2023-07-06 10:02:32Z INFO Terminal] Read value: ''
+[2023-07-06 10:02:32Z INFO PromptManager] Falling back to the default: 'Default'
+[2023-07-06 10:02:32Z INFO Terminal] WRITE LINE: 
+[2023-07-06 10:02:32Z INFO ConfigurationManager] Found a self-hosted runner group with id 1 and name Default
+[2023-07-06 10:02:32Z INFO CommandSettings] Flag 'disableupdate': 'False'
+[2023-07-06 10:02:32Z INFO CommandSettings] Flag 'ephemeral': 'False'
+[2023-07-06 10:02:32Z INFO CommandSettings] Arg 'name': ''
+[2023-07-06 10:02:32Z INFO CommandSettings] Flag 'unattended': 'False'
+[2023-07-06 10:02:32Z INFO PromptManager] ReadValue
+[2023-07-06 10:02:32Z INFO Terminal] WRITE: Enter the name of runner: 
+[2023-07-06 10:02:32Z INFO Terminal] WRITE: [press Enter for RUCHIR] 
+[2023-07-06 10:02:32Z INFO Terminal] READ LINE
+[2023-07-06 10:03:05Z INFO Terminal] Read value: 'Team'
+[2023-07-06 10:03:05Z INFO Terminal] WRITE LINE: 
+[2023-07-06 10:03:05Z INFO CommandSettings] Arg 'labels': ''
+[2023-07-06 10:03:05Z INFO CommandSettings] Flag 'unattended': 'False'
+[2023-07-06 10:03:05Z INFO PromptManager] ReadValue
+[2023-07-06 10:03:05Z INFO Terminal] WRITE: This runner will have the following labels: 'self-hosted', 'Windows', 'X64' 
+Enter any additional labels (ex. label-1,label-2): 
+[2023-07-06 10:03:05Z INFO Terminal] WRITE: [press Enter to skip] 
+[2023-07-06 10:03:05Z INFO Terminal] READ LINE
+[2023-07-06 10:03:11Z INFO Terminal] Read value: ''
+[2023-07-06 10:03:11Z INFO Terminal] WRITE LINE: 
+[2023-07-06 10:03:12Z INFO CommandSettings] Flag 'disableupdate': 'False'
+[2023-07-06 10:03:12Z INFO CommandSettings] Flag 'no-default-labels': 'False'
+[2023-07-06 10:03:12Z INFO CommandSettings] Flag 'disableupdate': 'False'
+[2023-07-06 10:03:12Z INFO CommandSettings] Flag 'ephemeral': 'False'
+[2023-07-06 10:03:12Z INFO ConfigurationStore] Saving OAuth credential @ C:\Test\actions-runner\.credentials
+[2023-07-06 10:03:12Z INFO ConfigurationStore] Credentials Saved.
+[2023-07-06 10:03:12Z INFO ConfigurationStore] HasCredentials()
+[2023-07-06 10:03:12Z INFO ConfigurationStore] stored True
+[2023-07-06 10:03:12Z INFO CredentialManager] GetCredentialProvider
+[2023-07-06 10:03:12Z INFO CredentialManager] Creating type OAuth
+[2023-07-06 10:03:12Z INFO CredentialManager] Creating credential type: OAuth
+[2023-07-06 10:03:12Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Test\actions-runner\.credentials_rsaparams
+[2023-07-06 10:03:12Z INFO RunnerServer] EstablishVssConnection
+[2023-07-06 10:03:12Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2023-07-06 10:03:12Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-06 10:03:12Z INFO RunnerServer] EstablishVssConnection
+[2023-07-06 10:03:12Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2023-07-06 10:03:12Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-06 10:03:12Z INFO RunnerServer] EstablishVssConnection
+[2023-07-06 10:03:12Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2023-07-06 10:03:12Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-06 10:03:13Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-06 10:03:13Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-06 10:03:13Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-06 10:03:14Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Test\actions-runner\.credentials_rsaparams
+[2023-07-06 10:03:14Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Test\actions-runner\.credentials_rsaparams
+[2023-07-06 10:03:15Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2023-07-06 10:03:15Z INFO CommandSettings] Arg 'work': ''
+[2023-07-06 10:03:15Z INFO CommandSettings] Flag 'unattended': 'False'
+[2023-07-06 10:03:15Z INFO PromptManager] ReadValue
+[2023-07-06 10:03:15Z INFO Terminal] WRITE: Enter name of work folder: 
+[2023-07-06 10:03:15Z INFO Terminal] WRITE: [press Enter for _work] 
+[2023-07-06 10:03:15Z INFO Terminal] READ LINE
+[2023-07-06 10:04:05Z INFO Terminal] Read value: ''
+[2023-07-06 10:04:05Z INFO PromptManager] Falling back to the default: '_work'
+[2023-07-06 10:04:05Z INFO ConfigurationStore] Saving runner settings.
+[2023-07-06 10:04:05Z INFO ConfigurationStore] Settings Saved.
+[2023-07-06 10:04:05Z INFO Terminal] WRITE LINE: 
+[2023-07-06 10:04:05Z INFO Terminal] WRITE LINE: 
+[2023-07-06 10:04:05Z INFO CommandSettings] Flag 'runasservice': 'False'
+[2023-07-06 10:04:05Z INFO CommandSettings] Flag 'unattended': 'False'
+[2023-07-06 10:04:05Z INFO PromptManager] ReadValue
+[2023-07-06 10:04:05Z INFO Terminal] WRITE: Would you like to run the runner as service? (Y/N) 
+[2023-07-06 10:04:05Z INFO Terminal] WRITE: [press Enter for N] 
+[2023-07-06 10:04:05Z INFO Terminal] READ LINE
+[2023-07-06 10:04:21Z INFO Terminal] Read value: 'y'
+[2023-07-06 10:04:21Z INFO ConfigurationManager] Configuring to run the agent as service
+[2023-07-06 10:04:21Z ERR  WindowsServiceControlManager] Needs Administrator privileges for configure runner as windows service.
+[2023-07-06 10:04:21Z ERR  Runner] System.Security.SecurityException: Needs Administrator privileges for configuring runner as windows service.
+   at GitHub.Runner.Listener.Configuration.WindowsServiceControlManager.ConfigureService(RunnerSettings settings, CommandSettings command)
+   at GitHub.Runner.Listener.Configuration.ConfigurationManager.ConfigureAsync(CommandSettings command)
+   at GitHub.Runner.Listener.Runner.ExecuteCommand(CommandSettings command)
+[2023-07-06 10:04:21Z ERR  Terminal] WRITE ERROR: Needs Administrator privileges for configuring runner as windows service.
+[2023-07-06 10:04:21Z INFO Listener] Runner execution has finished with return code 1

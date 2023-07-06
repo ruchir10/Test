@@ -1,122 +1,122 @@
-# name: deploy-terraform
+name: deploy-terraform
 
-# on:
+on:
 
-#   push:
+  push:
 
-#     paths:
+    paths:
 
-#       - 'ifx/terraform/**'
+      - 'ifx/terraform/**'
 
-#     branches: [ main ]
+    branches: [ main ]
 
-#   workflow_dispatch:
+  workflow_dispatch:
 
 
-# jobs:
-# # Job for deploying Terraform to the Team environment
-#   TerraformToTeam:
+jobs:
+# Job for deploying Terraform to the Team environment
+  TerraformToTeam:
 
-#     runs-on: CAI-Enterprise
+    runs-on: CAI-Enterprise
 
-#     environment: Team
+    environment: Team
 
-#     env:
+    env:
 
-#       TARGET: team
+      TARGET: team
 
-#     steps:
+    steps:
 
-#       - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-#       - id: terraform_common
+      - id: terraform_common
 
-#         uses: ./.github/workflows/actions/applyTerraformToEnv        
+        uses: ./.github/workflows/actions/applyTerraformToEnv        
 
-#         with:
+        with:
 
-#           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-#           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-#           ENVIRONMENT: "common"
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          ENVIRONMENT: "common"
 
-#       - id: terraform_environment
+      - id: terraform_environment
 
-#         uses: ./.github/workflows/actions/applyTerraformToEnv        
+        uses: ./.github/workflows/actions/applyTerraformToEnv        
 
-#         with:
+        with:
 
-#           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-#           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-#           ENVIRONMENT: ${{ env.TARGET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          ENVIRONMENT: ${{ env.TARGET }}
 
-#   TerraformToInteg:
-#  # Job for deploying Terraform to the Integration environment
-#     runs-on: CAI-Enterprise
+  TerraformToInteg:
+ # Job for deploying Terraform to the Integration environment
+    runs-on: CAI-Enterprise
 
-#     needs: [TerraformToTeam]
+    needs: [TerraformToTeam]
 
-#     environment: Integ
+    environment: Integ
 
-#     env:
+    env:
 
-#       TARGET: integ
+      TARGET: integ
 
-#     steps:
+    steps:
 
-#       - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-#       - id: terraform_common
+      - id: terraform_common
 
-#         uses: ./.github/workflows/actions/applyTerraformToEnv        
+        uses: ./.github/workflows/actions/applyTerraformToEnv        
 
-#         with:
+        with:
 
-#           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-#           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-#           ENVIRONMENT: "common"
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          ENVIRONMENT: "common"
 
-#       - id: terraform_environment
+      - id: terraform_environment
 
-#         uses: ./.github/workflows/actions/applyTerraformToEnv        
+        uses: ./.github/workflows/actions/applyTerraformToEnv        
 
-#         with:
+        with:
 
-#           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-#           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-#           ENVIRONMENT: ${{ env.TARGET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          ENVIRONMENT: ${{ env.TARGET }}
 
-#   TerraformToProd:
-#   # Job for deploying Terraform to the Production environment
-#     runs-on: CAI-Enterprise
+  TerraformToProd:
+  # Job for deploying Terraform to the Production environment
+    runs-on: CAI-Enterprise
 
-#     needs: [TerraformToInteg]
+    needs: [TerraformToInteg]
 
-#     environment: Production
+    environment: Production
 
-#     env:
+    env:
 
-#       TARGET: prod
+      TARGET: prod
 
-#     steps:
+    steps:
 
-#       - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-#       - id: terraform_common
+      - id: terraform_common
 
-#         uses: ./.github/workflows/actions/applyTerraformToEnv        
+        uses: ./.github/workflows/actions/applyTerraformToEnv        
 
-#         with:
+        with:
 
-#           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-#           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-#           ENVIRONMENT: "common"
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          ENVIRONMENT: "common"
 
-#       - id: terraform_environment
+      - id: terraform_environment
 
-#         uses: ./.github/workflows/actions/applyTerraformToEnv        
+        uses: ./.github/workflows/actions/applyTerraformToEnv        
 
-#         with:
+        with:
 
-#           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-#           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-#           ENVIRONMENT: ${{ env.TARGET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          ENVIRONMENT: ${{ env.TARGET }}
