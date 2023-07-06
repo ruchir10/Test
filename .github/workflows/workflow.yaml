@@ -18,16 +18,23 @@ jobs:
           pip install awscli
       
       - name: Create S3 Bucket
+        id: create_bucket
         run: |
           aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws s3api create-bucket --bucket testaws --region ap-south-1 --create-bucket-configuration LocationConstraint=ap-south-1
-
-
+          aws s3api create-bucket --bucket testaws --region ap-south-1 --create-bucket-configuration LocationConstraint=ap-south-1 || echo "Bucket already exists"
+      
+      - name: Determine Bucket Name
+        id: bucket_name
+        run: |
+          if [[ ${{ steps.create_bucket.outputs.exitcode }} -eq 0 ]]; then
+            echo "Bucket Name=testaws"
+          else
+            echo "Bucket Name=test212334"
+          fi
       
       - name: Sync .py files with S3
         run: |
           aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws s3 sync . s3://testaws --include "*.py" --delete
-#yghg
+          aws s3 sync . "s3://${{ steps.bucket_name.outputs.BucketName }}" --include "*.py" --delete
