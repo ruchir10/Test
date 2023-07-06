@@ -27,11 +27,10 @@ jobs:
 
 
 deploy-terraform:
- on:
-     push:
-        branches: [main]
-
-    workflow_dispatch:
+        on:
+             push:
+                branches: [main]
+        workflow_dispatch:
 
     jobs:
       # Job for deploying Terraform to the Team environment
