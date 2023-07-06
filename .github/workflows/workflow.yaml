@@ -37,3 +37,5 @@ jobs:
         run: |
           bucket_name="${{ steps.generate_bucket_name.outputs.BucketName }}"
           aws s3 sync . "s3://$bucket_name" --include "*.py" --delete
+
+#gygygh
