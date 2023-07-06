@@ -1,0 +1,122 @@
+name: deploy-terraform
+
+on:
+
+  push:
+
+    paths:
+
+      - 'ifx/terraform/**'
+
+    branches: [ main ]
+
+  workflow_dispatch:
+
+
+jobs:
+
+  TerraformToTeam:
+
+    runs-on: CAI-Enterprise
+
+    environment: Team
+
+    env:
+
+      TARGET: team
+
+    steps:
+
+      - uses: actions/checkout@v2
+
+      - id: terraform_common
+
+        uses: ./.github/workflows/actions/applyTerraformToEnv        
+
+        with:
+
+          AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT }}
+          AWS_ACCOUNT_NAME: ${{ secrets.AWS_ACCOUNT_NAME }}
+          ENVIRONMENT: "common"
+
+      - id: terraform_environment
+
+        uses: ./.github/workflows/actions/applyTerraformToEnv        
+
+        with:
+
+          AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT }}
+          AWS_ACCOUNT_NAME: ${{ secrets.AWS_ACCOUNT_NAME }}
+          ENVIRONMENT: ${{ env.TARGET }}
+
+  TerraformToInteg:
+
+    runs-on: CAI-Enterprise
+
+    needs: [TerraformToTeam]
+
+    environment: Integ
+
+    env:
+
+      TARGET: integ
+
+    steps:
+
+      - uses: actions/checkout@v2
+
+      - id: terraform_common
+
+        uses: ./.github/workflows/actions/applyTerraformToEnv        
+
+        with:
+
+          AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT }}
+          AWS_ACCOUNT_NAME: ${{ secrets.AWS_ACCOUNT_NAME }}
+          ENVIRONMENT: "common"
+
+      - id: terraform_environment
+
+        uses: ./.github/workflows/actions/applyTerraformToEnv        
+
+        with:
+
+          AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT }}
+          AWS_ACCOUNT_NAME: ${{ secrets.AWS_ACCOUNT_NAME }}
+          ENVIRONMENT: ${{ env.TARGET }}
+
+  TerraformToProd:
+
+    runs-on: CAI-Enterprise
+
+    needs: [TerraformToInteg]
+
+    environment: Production
+
+    env:
+
+      TARGET: prod
+
+    steps:
+
+      - uses: actions/checkout@v2
+
+      - id: terraform_common
+
+        uses: ./.github/workflows/actions/applyTerraformToEnv        
+
+        with:
+
+          AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT }}
+          AWS_ACCOUNT_NAME: ${{ secrets.AWS_ACCOUNT_NAME }}
+          ENVIRONMENT: "common"
+
+      - id: terraform_environment
+
+        uses: ./.github/workflows/actions/applyTerraformToEnv        
+
+        with:
+
+          AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT }}
+          AWS_ACCOUNT_NAME: ${{ secrets.AWS_ACCOUNT_NAME }}
+          ENVIRONMENT: ${{ env.TARGET }}
