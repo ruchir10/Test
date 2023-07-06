@@ -14,7 +14,7 @@ on:
 
 
 jobs:
-
+# Job for deploying Terraform to the Team environment
   TerraformToTeam:
 
     runs-on: CAI-Enterprise
@@ -35,8 +35,8 @@ jobs:
 
         with:
 
-          AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT }}
-          AWS_ACCOUNT_NAME: ${{ secrets.AWS_ACCOUNT_NAME }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           ENVIRONMENT: "common"
 
       - id: terraform_environment
@@ -45,12 +45,12 @@ jobs:
 
         with:
 
-          AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT }}
-          AWS_ACCOUNT_NAME: ${{ secrets.AWS_ACCOUNT_NAME }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           ENVIRONMENT: ${{ env.TARGET }}
 
   TerraformToInteg:
-
+ # Job for deploying Terraform to the Integration environment
     runs-on: CAI-Enterprise
 
     needs: [TerraformToTeam]
@@ -71,8 +71,8 @@ jobs:
 
         with:
 
-          AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT }}
-          AWS_ACCOUNT_NAME: ${{ secrets.AWS_ACCOUNT_NAME }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           ENVIRONMENT: "common"
 
       - id: terraform_environment
@@ -81,12 +81,12 @@ jobs:
 
         with:
 
-          AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT }}
-          AWS_ACCOUNT_NAME: ${{ secrets.AWS_ACCOUNT_NAME }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           ENVIRONMENT: ${{ env.TARGET }}
 
   TerraformToProd:
-
+  # Job for deploying Terraform to the Production environment
     runs-on: CAI-Enterprise
 
     needs: [TerraformToInteg]
@@ -107,8 +107,8 @@ jobs:
 
         with:
 
-          AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT }}
-          AWS_ACCOUNT_NAME: ${{ secrets.AWS_ACCOUNT_NAME }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           ENVIRONMENT: "common"
 
       - id: terraform_environment
@@ -117,6 +117,6 @@ jobs:
 
         with:
 
-          AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT }}
-          AWS_ACCOUNT_NAME: ${{ secrets.AWS_ACCOUNT_NAME }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           ENVIRONMENT: ${{ env.TARGET }}
