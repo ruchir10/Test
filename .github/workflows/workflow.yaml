@@ -27,11 +27,13 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
-          aws s3api create-bucket --bucket ${{ steps.generate_bucket_name.outputs.BucketName }} --region ap-south-1 --create-bucket-configuration LocationConstraint=ap-south-1
+          bucket_name="${{ steps.generate_bucket_name.outputs.BucketName }}"
+          aws s3api create-bucket --bucket "$bucket_name" --region ap-south-1 --create-bucket-configuration LocationConstraint=ap-south-1
 
       - name: Sync .py files with S3
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
-          aws s3 sync . "s3://${{ steps.generate_bucket_name.outputs.BucketName }}" --include "*.py" --delete
+          bucket_name="${{ steps.generate_bucket_name.outputs.BucketName }}"
+          aws s3 sync . "s3://$bucket_name" --include "*.py" --delete
