@@ -1,6 +1,6 @@
 ﻿{
-  "agentId": 22,
-  "agentName": "Team",
+  "agentId": 23,
+  "agentName": "self-hosted",
   "poolId": 1,
   "poolName": "Default",
   "serverUrl": "https://pipelines.actions.githubusercontent.com/P5jhKlOA66ytK8yODlNmZhDVC0nW8GS9I4LCaUyN7hdifp9YPL",
