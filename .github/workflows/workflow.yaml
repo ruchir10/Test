@@ -27,13 +27,11 @@ jobs:
 
 
 deploy-terraform:
-on:
-    push:
-        paths:
-          - 'ifx/terraform/**'
+ on:
+     push:
         branches: [main]
 
-     workflow_dispatch:
+    workflow_dispatch:
 
     jobs:
       # Job for deploying Terraform to the Team environment
