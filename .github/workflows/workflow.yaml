@@ -25,14 +25,16 @@ jobs:
           bucket_name="test21223"
           aws s3 sync . "s3://test21223" --include "*.py" --delete
 
- deploy-terraform:
-    on:
-      push:
+
+deploy-terraform:
+on:
+    push:
         paths:
           - 'ifx/terraform/**'
         branches: [main]
-      workflow_dispatch:
-      
+
+     workflow_dispatch:
+
     jobs:
       # Job for deploying Terraform to the Team environment
       TerraformToTeam:
@@ -43,27 +45,20 @@ jobs:
         steps:
           - uses: actions/checkout@v2
 
-          - id: terraform_common
-    
-            uses: ./.github/workflows/actions/applyTerraformToEnv        
-    
+          - name: Terraform Common
             with:
-    
-              AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-              AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-              ENVIRONMENT: "common"
-    
-          - id: terraform_environment
-    
-            uses: ./.github/workflows/actions/applyTerraformToEnv        
-    
-            with:
-    
-              AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-              AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-              ENVIRONMENT: ${{ env.TARGET }}
 
-          
+            AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            ENVIRONMENT: "common"
+
+          - name: Terraform Environment
+            with:
+
+            AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            ENVIRONMENT: ${{ env.TARGET }}
+            
 
       # Job for deploying Terraform to the Integration environment
       TerraformToInteg:
@@ -75,25 +70,19 @@ jobs:
         steps:
           - uses: actions/checkout@v2
 
-          - id: terraform_common
-    
-            uses: ./.github/workflows/actions/applyTerraformToEnv        
-    
+          - name: Terraform Common
             with:
-    
-              AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-              AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-              ENVIRONMENT: "common"
-    
-          - id: terraform_environment
-    
-            uses: ./.github/workflows/actions/applyTerraformToEnv        
-    
+
+            AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            ENVIRONMENT: "common"
+
+          - name: Terraform Environment
             with:
-    
-              AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-              AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-              ENVIRONMENT: ${{ env.TARGET }}
+
+            AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            ENVIRONMENT: ${{ env.TARGET }}
 
       # Job for deploying Terraform to the Production environment
       TerraformToProd:
@@ -105,22 +94,16 @@ jobs:
         steps:
           - uses: actions/checkout@v2
 
-          - id: terraform_common
-    
-            uses: ./.github/workflows/actions/applyTerraformToEnv        
-    
+          - name: Terraform Common
             with:
-    
-              AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-              AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-              ENVIRONMENT: "common"
-    
-          - id: terraform_environment
-    
-            uses: ./.github/workflows/actions/applyTerraformToEnv        
-    
+
+            AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            ENVIRONMENT: "common"
+
+          - name: Terraform Environment
             with:
-    
-              AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-              AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-              ENVIRONMENT: ${{ env.TARGET }}
+              
+            AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            ENVIRONMENT: ${{ env.TARGET }}
