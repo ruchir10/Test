@@ -25,14 +25,16 @@ jobs:
           bucket_name="test21223"
           aws s3 sync . "s3://test21223" --include "*.py" --delete
 
+
   TerraformToTeam:
-    runs-on: self-hosted
+    runs-on: CAI-Enterprise
     environment: Team
     env:
       TARGET: team
     needs: [sync]
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
       - name: Terraform Common
         uses: ./.github/workflows/actions/applyTerraformToEnv
@@ -49,13 +51,14 @@ jobs:
           ENVIRONMENT: ${{ env.TARGET }}
 
   TerraformToInteg:
-    runs-on: self-hosted
+    runs-on: CAI-Enterprise
     environment: Integ
     env:
       TARGET: integ
     needs: [TerraformToTeam]
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
       - name: Terraform Common
         uses: ./.github/workflows/actions/applyTerraformToEnv
@@ -72,13 +75,14 @@ jobs:
           ENVIRONMENT: ${{ env.TARGET }}
 
   TerraformToProd:
-    runs-on: self-hosted
+    runs-on: CAI-Enterprise
     environment: Production
     env:
       TARGET: prod
     needs: [TerraformToInteg]
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
       - name: Terraform Common
         uses: ./.github/workflows/actions/applyTerraformToEnv
@@ -87,10 +91,4 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           ENVIRONMENT: "common"
 
-      - name: Terraform Environment
-        uses: ./.github/workflows/actions/applyTerraformToEnv
-        with:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          ENVIRONMENT: ${{ env.TARGET }}
-#dfdf
+     

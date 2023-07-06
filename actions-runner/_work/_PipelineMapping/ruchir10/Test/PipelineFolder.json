@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "ruchir10/Test",
+  "pipelineDirectory": "Test",
+  "workspaceDirectory": "Test\\Test",
+  "repositories": {
+    "ruchir10/Test": {
+      "repositoryPath": "Test\\Test",
+      "lastRunOn": "07/06/2023 16:11:19 +05:30"
+    }
+  },
+  "lastRunOn": "07/06/2023 16:11:19 +05:30"
+}

@@ -120,3 +120,38 @@
 [2023-07-06 10:38:46Z INFO Terminal] WRITE LINE: Current runner version: '2.305.0'
 [2023-07-06 10:38:46Z INFO Terminal] WRITE LINE: 2023-07-06 10:38:46Z: Listening for Jobs
 [2023-07-06 10:38:46Z INFO JobDispatcher] Set runner/worker IPC timeout to 30 seconds.
+[2023-07-06 10:41:16Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Test\actions-runner\.credentials_rsaparams
+[2023-07-06 10:41:16Z INFO MessageListener] Message '1' received from session '82632785-2284-42d9-a1d8-39971c05a1f8'.
+[2023-07-06 10:41:16Z INFO Runner] Received job message of length 21909 from service, with hash '191299ee3d4fedda98008781fbf0a822c6648ff13fa4a1d66596741cc3fb90fc'
+[2023-07-06 10:41:16Z INFO JobDispatcher] Job request 80 for plan 939353aa-ce49-4712-b07a-4d5c7da81ecc job f7c43188-113f-5ec7-ec29-fc5e85adccb9 received.
+[2023-07-06 10:41:16Z INFO JobDispatcher] Pull OrchestrationId 939353aa-ce49-4712-b07a-4d5c7da81ecc.terraformtoteam.__default from JWT claims
+[2023-07-06 10:41:16Z INFO Terminal] WRITE LINE: 2023-07-06 10:41:16Z: Running job: TerraformToTeam
+[2023-07-06 10:41:16Z INFO JobDispatcher] Start renew job request 80 for job f7c43188-113f-5ec7-ec29-fc5e85adccb9.
+[2023-07-06 10:41:17Z INFO JobDispatcher] Successfully renew job request 80, job is valid till 7/6/2023 10:51:17 AM
+[2023-07-06 10:41:17Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 10:41:17Z INFO ProcessInvokerWrapper] Starting process:
+[2023-07-06 10:41:17Z INFO ProcessInvokerWrapper]   File name: 'C:\Test\actions-runner\bin\Runner.Worker.exe'
+[2023-07-06 10:41:17Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 2360 2372'
+[2023-07-06 10:41:17Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Test\actions-runner\bin'
+[2023-07-06 10:41:17Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-07-06 10:41:17Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-07-06 10:41:17Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2023-07-06 10:41:17Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-07-06 10:41:17Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2023-07-06 10:41:17Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-07-06 10:41:17Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2023-07-06 10:41:17Z INFO ProcessInvokerWrapper] Process started with process id 26932, waiting for process exit.
+[2023-07-06 10:41:17Z INFO JobDispatcher] Send job request message to worker for job f7c43188-113f-5ec7-ec29-fc5e85adccb9.
+[2023-07-06 10:41:17Z INFO ProcessChannel] Sending message of length 21878, with hash '2ba2499c7b350a330377e08426de197ef2573bf6582400bd76c559c01e7a0648'
+[2023-07-06 10:41:17Z INFO JobNotification] Entering JobStarted Notification
+[2023-07-06 10:41:17Z INFO JobNotification] Entering StartMonitor
+[2023-07-06 10:42:06Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-06 10:42:06Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-06 10:42:06Z INFO ProcessInvokerWrapper] Finished process 26932 with exit code 102, and elapsed time 00:00:49.2458261.
+[2023-07-06 10:42:06Z INFO JobDispatcher] Worker finished for job f7c43188-113f-5ec7-ec29-fc5e85adccb9. Code: 102
+[2023-07-06 10:42:06Z INFO JobDispatcher] finish job request for job f7c43188-113f-5ec7-ec29-fc5e85adccb9 with result: Failed
+[2023-07-06 10:42:06Z INFO Terminal] WRITE LINE: 2023-07-06 10:42:06Z: Job TerraformToTeam completed with result: Failed
+[2023-07-06 10:42:06Z INFO JobDispatcher] Stop renew job request for job f7c43188-113f-5ec7-ec29-fc5e85adccb9.
+[2023-07-06 10:42:06Z INFO JobDispatcher] job renew has been cancelled, stop renew job request 80.
+[2023-07-06 10:42:06Z INFO JobNotification] Entering JobCompleted Notification
+[2023-07-06 10:42:06Z INFO JobNotification] Entering EndMonitor
