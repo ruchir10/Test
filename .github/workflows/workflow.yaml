@@ -31,8 +31,7 @@ deploy-terraform:
              push:
                 branches: [main]
         workflow_dispatch:
-
-    jobs:
+      jobs:
       # Job for deploying Terraform to the Team environment
       TerraformToTeam:
         runs-on: CAI-Enterprise
