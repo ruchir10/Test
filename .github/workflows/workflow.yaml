@@ -27,7 +27,7 @@ jobs:
         run: |
           aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws s3 sync . s3://my-new-bucket1 --include "*.*" --delete
+          aws s3 sync . s3://awsbucket --include "*.*" --delete
 
      # - name: Execute file.py
       #  run: |
