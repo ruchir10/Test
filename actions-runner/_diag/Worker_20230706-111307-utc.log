@@ -1,0 +1,1587 @@
+[2023-07-06 11:13:07Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2023-07-06 11:13:07Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:07Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:07Z INFO HostContext] Well known config file 'Credentials': 'C:\Test\actions-runner\.credentials'
+[2023-07-06 11:13:07Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:07Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:07Z INFO HostContext] Well known config file 'Runner': 'C:\Test\actions-runner\.runner'
+[2023-07-06 11:13:07Z INFO Worker] Version: 2.305.0
+[2023-07-06 11:13:07Z INFO Worker] Commit: 6cbe663c239dba8a109c6ac2801b25f1ed7c51e9
+[2023-07-06 11:13:07Z INFO Worker] Culture: en-US
+[2023-07-06 11:13:07Z INFO Worker] UI Culture: en-US
+[2023-07-06 11:13:07Z INFO Worker] Waiting to receive the job message from the channel.
+[2023-07-06 11:13:07Z INFO ProcessChannel] Receiving message of length 21084, with hash 'a92b01115aece044c932fd38cdd3c3e333a25639bbc3598304f42812be3c1aa6'
+[2023-07-06 11:13:07Z INFO Worker] Message received.
+[2023-07-06 11:13:07Z INFO Worker] Job message:
+ {
+  "environmentVariables": [
+    {
+      "type": 2,
+      "file": 1,
+      "line": 56,
+      "col": 7,
+      "map": [
+        {
+          "key": {
+            "type": 0,
+            "file": 1,
+            "line": 56,
+            "col": 7,
+            "lit": "TARGET"
+          },
+          "value": {
+            "type": 0,
+            "file": 1,
+            "line": 56,
+            "col": 15,
+            "lit": "integ"
+          }
+        }
+      ]
+    }
+  ],
+  "fileTable": [
+    ".github/workflows/workflow.yaml"
+  ],
+  "mask": [
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    }
+  ],
+  "steps": [
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 59,
+        "col": 15,
+        "lit": "Terraform Common"
+      },
+      "contextName": "__run",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 3,
+              "file": 1,
+              "line": 60,
+              "col": 14,
+              "expr": "format('\necho \"Running Terraform Common\"\necho \"AWS_ACCESS_KEY_ID={0}\"\necho \"AWS_SECRET_ACCESS_KEY={1}\"\necho \"ENVIRONMENT=common\"\n', secrets.AWS_ACCESS_KEY_ID, secrets.AWS_SECRET_ACCESS_KEY)"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "f49fcc7e-8e59-5a3e-bcf2-6cba91195ec9",
+      "name": "__run"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 67,
+        "col": 15,
+        "lit": "Terraform Environment"
+      },
+      "contextName": "__run_2",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 3,
+              "file": 1,
+              "line": 68,
+              "col": 14,
+              "expr": "format('\necho \"Running Terraform Environment\"\necho \"AWS_ACCESS_KEY_ID={0}\"\necho \"AWS_SECRET_ACCESS_KEY={1}\"\necho \"ENVIRONMENT={2}\"\n', secrets.AWS_ACCESS_KEY_ID, secrets.AWS_SECRET_ACCESS_KEY, env.TARGET)"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "93e08cf3-d96a-5d2a-45d0-aa3d60acb502",
+      "name": "__run_2"
+    }
+  ],
+  "variables": {
+    "AWS_ACCESS_KEY_ID": {
+      "value": "***",
+      "isSecret": true
+    },
+    "AWS_SECRET_ACCESS_KEY": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.isScheduled": {
+      "value": "False"
+    },
+    "system.servertype": {
+      "value": "Hosted"
+    },
+    "system.culture": {
+      "value": ""
+    },
+    "system.pipelineStartTime": {
+      "value": "2023-07-06 11:13:04+00:00"
+    },
+    "system.runner.lowdiskspacethreshold": {
+      "value": "100"
+    },
+    "DistributedTask.NewActionMetadata": {
+      "value": "true"
+    },
+    "DistributedTask.EnableCompositeActions": {
+      "value": "true"
+    },
+    "DistributedTask.EnhancedAnnotations": {
+      "value": "true"
+    },
+    "DistributedTask.UploadStepSummary": {
+      "value": "true"
+    },
+    "DistributedTask.ForceGithubJavascriptActionsToNode16": {
+      "value": "true"
+    },
+    "DistributedTask.AddWarningToNode12Action": {
+      "value": "true"
+    },
+    "DistributedTask.AllowRunnerContainerHooks": {
+      "value": "true"
+    },
+    "DistributedTask.DeprecateStepOutputCommands": {
+      "value": "true"
+    },
+    "system.teamProjectId": {
+      "value": "00000000-0000-0000-0000-000000000000"
+    },
+    "build.buildId": {
+      "value": "81"
+    },
+    "build.containerId": {
+      "value": "4635986"
+    },
+    "system.workflowFilePath": {
+      "value": ".github/workflows/workflow.yaml"
+    },
+    "system.phaseDisplayName": {
+      "value": "TerraformToInteg"
+    },
+    "system.phaseId": {
+      "value": "e69154c4-7afc-5b09-2035-11fbef7cb78a"
+    },
+    "system.phaseName": {
+      "value": "TerraformToInteg"
+    },
+    "system.phaseAttempt": {
+      "value": "1"
+    },
+    "system.jobIdentifier": {
+      "value": "TerraformToInteg.__default"
+    },
+    "system.jobAttempt": {
+      "value": "1"
+    },
+    "System.JobPositionInPhase": {
+      "value": "1"
+    },
+    "System.TotalJobsInPhase": {
+      "value": "1"
+    },
+    "system.github.job": {
+      "value": "TerraformToInteg"
+    },
+    "system.jobDisplayName": {
+      "value": "TerraformToInteg"
+    },
+    "system.jobId": {
+      "value": "61c41d48-2780-5525-c887-5750df446f65"
+    },
+    "system.jobName": {
+      "value": "__default"
+    },
+    "system.github.token.permissions": {
+      "value": "{\"Contents\":\"read\",\"Metadata\":\"read\",\"Packages\":\"read\"}"
+    },
+    "system.github.token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.runnerEnvironment": {
+      "value": "self-hosted"
+    },
+    "system.orchestrationId": {
+      "value": "ea27600f-11f2-4bfc-a9fa-c7b83195cca8.terraformtointeg.__default"
+    },
+    "system.runnerGroupName": {
+      "value": "Default"
+    }
+  },
+  "messageType": "PipelineAgentJobRequest",
+  "plan": {
+    "scopeIdentifier": "00000000-0000-0000-0000-000000000000",
+    "planType": "Actions",
+    "version": 31,
+    "planId": "ea27600f-11f2-4bfc-a9fa-c7b83195cca8",
+    "planGroup": "Actions:00000000-0000-0000-0000-000000000000:1",
+    "artifactUri": "vstfs:///Build/Build/81",
+    "artifactLocation": null,
+    "definition": {
+      "_links": {},
+      "id": 3,
+      "name": "Test"
+    },
+    "owner": {
+      "_links": {},
+      "id": 3,
+      "name": "ruchir10"
+    }
+  },
+  "timeline": {
+    "id": "ea27600f-11f2-4bfc-a9fa-c7b83195cca8",
+    "changeId": 0,
+    "location": null
+  },
+  "jobId": "61c41d48-2780-5525-c887-5750df446f65",
+  "jobDisplayName": "TerraformToInteg",
+  "jobName": "__default",
+  "requestId": 89,
+  "lockedUntil": "0001-01-01T00:00:00",
+  "resources": {
+    "endpoints": [
+      {
+        "data": {
+          "ServerId": "b31ebca9-f91b-4b8c-a32b-2cccf5dafee9",
+          "ServerName": "P5jhKlOA66ytK8yODlNmZhDVC0nW8GS9I4LCaUyN7hdifp9YPL",
+          "CacheServerUrl": "https://artifactcache.actions.githubusercontent.com/P5jhKlOA66ytK8yODlNmZhDVC0nW8GS9I4LCaUyN7hdifp9YPL/",
+          "FeedStreamUrl": "https://pipelines.actions.githubusercontent.com/P5jhKlOA66ytK8yODlNmZhDVC0nW8GS9I4LCaUyN7hdifp9YPL/00000000-0000-0000-0000-000000000000/_apis/distributedtask/hubs/Actions/plans/ea27600f-11f2-4bfc-a9fa-c7b83195cca8/timelines/ea27600f-11f2-4bfc-a9fa-c7b83195cca8/records/61c41d48-2780-5525-c887-5750df446f65/feedstream?api-version=6.0-preview"
+        },
+        "name": "SystemVssConnection",
+        "url": "https://pipelines.actions.githubusercontent.com/P5jhKlOA66ytK8yODlNmZhDVC0nW8GS9I4LCaUyN7hdifp9YPL/",
+        "authorization": {
+          "parameters": {
+            "AccessToken": ***
+          },
+          "scheme": "OAuth"
+        },
+        "isShared": false,
+        "isReady": true
+      }
+    ]
+  },
+  "contextData": {
+    "github": {
+      "t": 2,
+      "d": [
+        {
+          "k": "ref",
+          "v": "refs/heads/main"
+        },
+        {
+          "k": "sha",
+          "v": "6c4a32b56f265f2e7988e5878bac45ea59bc6b78"
+        },
+        {
+          "k": "repository",
+          "v": "ruchir10/Test"
+        },
+        {
+          "k": "repository_owner",
+          "v": "ruchir10"
+        },
+        {
+          "k": "repository_owner_id",
+          "v": "71547967"
+        },
+        {
+          "k": "repositoryUrl",
+          "v": "git://github.com/ruchir10/Test.git"
+        },
+        {
+          "k": "run_id",
+          "v": "5474768426"
+        },
+        {
+          "k": "run_number",
+          "v": "91"
+        },
+        {
+          "k": "retention_days",
+          "v": "90"
+        },
+        {
+          "k": "run_attempt",
+          "v": "1"
+        },
+        {
+          "k": "artifact_cache_size_limit",
+          "v": "10"
+        },
+        {
+          "k": "repository_visibility",
+          "v": "public"
+        },
+        {
+          "k": "repo-self-hosted-runners-disabled",
+          "v": false
+        },
+        {
+          "k": "repository_id",
+          "v": "656042973"
+        },
+        {
+          "k": "actor_id",
+          "v": "71547967"
+        },
+        {
+          "k": "actor",
+          "v": "ruchir10"
+        },
+        {
+          "k": "triggering_actor",
+          "v": "ruchir10"
+        },
+        {
+          "k": "workflow",
+          "v": "Sync S3 with GitHub"
+        },
+        {
+          "k": "head_ref",
+          "v": ""
+        },
+        {
+          "k": "base_ref",
+          "v": ""
+        },
+        {
+          "k": "event_name",
+          "v": "push"
+        },
+        {
+          "k": "event",
+          "v": {
+            "t": 2,
+            "d": [
+              {
+                "k": "after",
+                "v": "6c4a32b56f265f2e7988e5878bac45ea59bc6b78"
+              },
+              {
+                "k": "base_ref",
+                "v": null
+              },
+              {
+                "k": "before",
+                "v": "1322b628cdc85fcece251ac4d5727f31188013f6"
+              },
+              {
+                "k": "commits",
+                "v": {
+                  "t": 1,
+                  "a": [
+                    {
+                      "t": 2,
+                      "d": [
+                        {
+                          "k": "author",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "ruchir031198@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "ruchir"
+                              },
+                              {
+                                "k": "username",
+                                "v": "ruchir10"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "committer",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "ruchir031198@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "ruchir"
+                              },
+                              {
+                                "k": "username",
+                                "v": "ruchir10"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "distinct",
+                          "v": true
+                        },
+                        {
+                          "k": "id",
+                          "v": "6c4a32b56f265f2e7988e5878bac45ea59bc6b78"
+                        },
+                        {
+                          "k": "message",
+                          "v": "Update"
+                        },
+                        {
+                          "k": "timestamp",
+                          "v": "2023-07-06T16:42:08+05:30"
+                        },
+                        {
+                          "k": "tree_id",
+                          "v": "9590839e768e360eb465d5ea9c57d61548815ab7"
+                        },
+                        {
+                          "k": "url",
+                          "v": "https://github.com/ruchir10/Test/commit/6c4a32b56f265f2e7988e5878bac45ea59bc6b78"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "compare",
+                "v": "https://github.com/ruchir10/Test/compare/1322b628cdc8...6c4a32b56f26"
+              },
+              {
+                "k": "created",
+                "v": false
+              },
+              {
+                "k": "deleted",
+                "v": false
+              },
+              {
+                "k": "forced",
+                "v": false
+              },
+              {
+                "k": "head_commit",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "author",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "ruchir031198@gmail.com"
+                          },
+                          {
+                            "k": "name",
+                            "v": "ruchir"
+                          },
+                          {
+                            "k": "username",
+                            "v": "ruchir10"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "committer",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "ruchir031198@gmail.com"
+                          },
+                          {
+                            "k": "name",
+                            "v": "ruchir"
+                          },
+                          {
+                            "k": "username",
+                            "v": "ruchir10"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "distinct",
+                      "v": true
+                    },
+                    {
+                      "k": "id",
+                      "v": "6c4a32b56f265f2e7988e5878bac45ea59bc6b78"
+                    },
+                    {
+                      "k": "message",
+                      "v": "Update"
+                    },
+                    {
+                      "k": "timestamp",
+                      "v": "2023-07-06T16:42:08+05:30"
+                    },
+                    {
+                      "k": "tree_id",
+                      "v": "9590839e768e360eb465d5ea9c57d61548815ab7"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://github.com/ruchir10/Test/commit/6c4a32b56f265f2e7988e5878bac45ea59bc6b78"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "pusher",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "email",
+                      "v": "71547967+ruchir10@users.noreply.github.com"
+                    },
+                    {
+                      "k": "name",
+                      "v": "ruchir10"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "ref",
+                "v": "refs/heads/main"
+              },
+              {
+                "k": "repository",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "allow_forking",
+                      "v": true
+                    },
+                    {
+                      "k": "archive_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/{archive_format}{/ref}"
+                    },
+                    {
+                      "k": "archived",
+                      "v": false
+                    },
+                    {
+                      "k": "assignees_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/assignees{/user}"
+                    },
+                    {
+                      "k": "blobs_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/git/blobs{/sha}"
+                    },
+                    {
+                      "k": "branches_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/branches{/branch}"
+                    },
+                    {
+                      "k": "clone_url",
+                      "v": "https://github.com/ruchir10/Test.git"
+                    },
+                    {
+                      "k": "collaborators_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/collaborators{/collaborator}"
+                    },
+                    {
+                      "k": "comments_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/comments{/number}"
+                    },
+                    {
+                      "k": "commits_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/commits{/sha}"
+                    },
+                    {
+                      "k": "compare_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/compare/{base}...{head}"
+                    },
+                    {
+                      "k": "contents_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/contents/{+path}"
+                    },
+                    {
+                      "k": "contributors_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/contributors"
+                    },
+                    {
+                      "k": "created_at",
+                      "v": 1687243151.0
+                    },
+                    {
+                      "k": "default_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "deployments_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/deployments"
+                    },
+                    {
+                      "k": "description",
+                      "v": null
+                    },
+                    {
+                      "k": "disabled",
+                      "v": false
+                    },
+                    {
+                      "k": "downloads_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/downloads"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/events"
+                    },
+                    {
+                      "k": "fork",
+                      "v": false
+                    },
+                    {
+                      "k": "forks",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/forks"
+                    },
+                    {
+                      "k": "full_name",
+                      "v": "ruchir10/Test"
+                    },
+                    {
+                      "k": "git_commits_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/git/commits{/sha}"
+                    },
+                    {
+                      "k": "git_refs_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/git/refs{/sha}"
+                    },
+                    {
+                      "k": "git_tags_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/git/tags{/sha}"
+                    },
+                    {
+                      "k": "git_url",
+                      "v": "git://github.com/ruchir10/Test.git"
+                    },
+                    {
+                      "k": "has_discussions",
+                      "v": false
+                    },
+                    {
+                      "k": "has_downloads",
+                      "v": true
+                    },
+                    {
+                      "k": "has_issues",
+                      "v": true
+                    },
+                    {
+                      "k": "has_pages",
+                      "v": false
+                    },
+                    {
+                      "k": "has_projects",
+                      "v": true
+                    },
+                    {
+                      "k": "has_wiki",
+                      "v": true
+                    },
+                    {
+                      "k": "homepage",
+                      "v": null
+                    },
+                    {
+                      "k": "hooks_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/hooks"
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/ruchir10/Test"
+                    },
+                    {
+                      "k": "id",
+                      "v": 656042973.0
+                    },
+                    {
+                      "k": "is_template",
+                      "v": false
+                    },
+                    {
+                      "k": "issue_comment_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/issues/comments{/number}"
+                    },
+                    {
+                      "k": "issue_events_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/issues/events{/number}"
+                    },
+                    {
+                      "k": "issues_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/issues{/number}"
+                    },
+                    {
+                      "k": "keys_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/keys{/key_id}"
+                    },
+                    {
+                      "k": "labels_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/labels{/name}"
+                    },
+                    {
+                      "k": "language",
+                      "v": "JavaScript"
+                    },
+                    {
+                      "k": "languages_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/languages"
+                    },
+                    {
+                      "k": "license",
+                      "v": null
+                    },
+                    {
+                      "k": "master_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "merges_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/merges"
+                    },
+                    {
+                      "k": "milestones_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/milestones{/number}"
+                    },
+                    {
+                      "k": "mirror_url",
+                      "v": null
+                    },
+                    {
+                      "k": "name",
+                      "v": "Test"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "R_kgDOJxpr3Q"
+                    },
+                    {
+                      "k": "notifications_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/notifications{?since,all,participating}"
+                    },
+                    {
+                      "k": "open_issues",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "open_issues_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "owner",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "avatar_url",
+                            "v": "https://avatars.githubusercontent.com/u/71547967?v=4"
+                          },
+                          {
+                            "k": "email",
+                            "v": "71547967+ruchir10@users.noreply.github.com"
+                          },
+                          {
+                            "k": "events_url",
+                            "v": "https://api.github.com/users/ruchir10/events{/privacy}"
+                          },
+                          {
+                            "k": "followers_url",
+                            "v": "https://api.github.com/users/ruchir10/followers"
+                          },
+                          {
+                            "k": "following_url",
+                            "v": "https://api.github.com/users/ruchir10/following{/other_user}"
+                          },
+                          {
+                            "k": "gists_url",
+                            "v": "https://api.github.com/users/ruchir10/gists{/gist_id}"
+                          },
+                          {
+                            "k": "gravatar_id",
+                            "v": ""
+                          },
+                          {
+                            "k": "html_url",
+                            "v": "https://github.com/ruchir10"
+                          },
+                          {
+                            "k": "id",
+                            "v": 71547967.0
+                          },
+                          {
+                            "k": "login",
+                            "v": "ruchir10"
+                          },
+                          {
+                            "k": "name",
+                            "v": "ruchir10"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "MDQ6VXNlcjcxNTQ3OTY3"
+                          },
+                          {
+                            "k": "organizations_url",
+                            "v": "https://api.github.com/users/ruchir10/orgs"
+                          },
+                          {
+                            "k": "received_events_url",
+                            "v": "https://api.github.com/users/ruchir10/received_events"
+                          },
+                          {
+                            "k": "repos_url",
+                            "v": "https://api.github.com/users/ruchir10/repos"
+                          },
+                          {
+                            "k": "site_admin",
+                            "v": false
+                          },
+                          {
+                            "k": "starred_url",
+                            "v": "https://api.github.com/users/ruchir10/starred{/owner}{/repo}"
+                          },
+                          {
+                            "k": "subscriptions_url",
+                            "v": "https://api.github.com/users/ruchir10/subscriptions"
+                          },
+                          {
+                            "k": "type",
+                            "v": "User"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/users/ruchir10"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "private",
+                      "v": false
+                    },
+                    {
+                      "k": "pulls_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/pulls{/number}"
+                    },
+                    {
+                      "k": "pushed_at",
+                      "v": 1688641935.0
+                    },
+                    {
+                      "k": "releases_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/releases{/id}"
+                    },
+                    {
+                      "k": "size",
+                      "v": 146472.0
+                    },
+                    {
+                      "k": "ssh_url",
+                      "v": "git@github.com:ruchir10/Test.git"
+                    },
+                    {
+                      "k": "stargazers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/stargazers"
+                    },
+                    {
+                      "k": "statuses_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/statuses/{sha}"
+                    },
+                    {
+                      "k": "subscribers_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/subscribers"
+                    },
+                    {
+                      "k": "subscription_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/subscription"
+                    },
+                    {
+                      "k": "svn_url",
+                      "v": "https://github.com/ruchir10/Test"
+                    },
+                    {
+                      "k": "tags_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/tags"
+                    },
+                    {
+                      "k": "teams_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/teams"
+                    },
+                    {
+                      "k": "topics",
+                      "v": {
+                        "t": 1
+                      }
+                    },
+                    {
+                      "k": "trees_url",
+                      "v": "https://api.github.com/repos/ruchir10/Test/git/trees{/sha}"
+                    },
+                    {
+                      "k": "updated_at",
+                      "v": "2023-07-06T10:06:32Z"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://github.com/ruchir10/Test"
+                    },
+                    {
+                      "k": "visibility",
+                      "v": "public"
+                    },
+                    {
+                      "k": "watchers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "watchers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "web_commit_signoff_required",
+                      "v": false
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "sender",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "avatar_url",
+                      "v": "https://avatars.githubusercontent.com/u/71547967?v=4"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/users/ruchir10/events{/privacy}"
+                    },
+                    {
+                      "k": "followers_url",
+                      "v": "https://api.github.com/users/ruchir10/followers"
+                    },
+                    {
+                      "k": "following_url",
+                      "v": "https://api.github.com/users/ruchir10/following{/other_user}"
+                    },
+                    {
+                      "k": "gists_url",
+                      "v": "https://api.github.com/users/ruchir10/gists{/gist_id}"
+                    },
+                    {
+                      "k": "gravatar_id",
+                      "v": ""
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/ruchir10"
+                    },
+                    {
+                      "k": "id",
+                      "v": 71547967.0
+                    },
+                    {
+                      "k": "login",
+                      "v": "ruchir10"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "MDQ6VXNlcjcxNTQ3OTY3"
+                    },
+                    {
+                      "k": "organizations_url",
+                      "v": "https://api.github.com/users/ruchir10/orgs"
+                    },
+                    {
+                      "k": "received_events_url",
+                      "v": "https://api.github.com/users/ruchir10/received_events"
+                    },
+                    {
+                      "k": "repos_url",
+                      "v": "https://api.github.com/users/ruchir10/repos"
+                    },
+                    {
+                      "k": "site_admin",
+                      "v": false
+                    },
+                    {
+                      "k": "starred_url",
+                      "v": "https://api.github.com/users/ruchir10/starred{/owner}{/repo}"
+                    },
+                    {
+                      "k": "subscriptions_url",
+                      "v": "https://api.github.com/users/ruchir10/subscriptions"
+                    },
+                    {
+                      "k": "type",
+                      "v": "User"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/users/ruchir10"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "k": "server_url",
+          "v": "https://github.com"
+        },
+        {
+          "k": "api_url",
+          "v": "https://api.github.com"
+        },
+        {
+          "k": "graphql_url",
+          "v": "https://api.github.com/graphql"
+        },
+        {
+          "k": "ref_name",
+          "v": "main"
+        },
+        {
+          "k": "ref_protected",
+          "v": false
+        },
+        {
+          "k": "ref_type",
+          "v": "branch"
+        },
+        {
+          "k": "secret_source",
+          "v": "Actions"
+        },
+        {
+          "k": "workflow_ref",
+          "v": "ruchir10/Test/.github/workflows/workflow.yaml@refs/heads/main"
+        },
+        {
+          "k": "workflow_sha",
+          "v": "6c4a32b56f265f2e7988e5878bac45ea59bc6b78"
+        }
+      ]
+    },
+    "partialrerun": false,
+    "needs": {
+      "t": 2,
+      "d": [
+        {
+          "k": "TerraformToTeam",
+          "v": {
+            "t": 2,
+            "d": [
+              {
+                "k": "result",
+                "v": "success"
+              },
+              {
+                "k": "outputs",
+                "v": {
+                  "t": 2
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "vars": null,
+    "inputs": {
+      "t": 2
+    },
+    "matrix": null,
+    "strategy": {
+      "t": 2,
+      "d": [
+        {
+          "k": "fail-fast",
+          "v": true
+        },
+        {
+          "k": "job-index",
+          "v": 0.0
+        },
+        {
+          "k": "job-total",
+          "v": 1.0
+        },
+        {
+          "k": "max-parallel",
+          "v": 1.0
+        }
+      ]
+    }
+  },
+  "actionsEnvironment": {
+    "name": "Integ",
+    "url": null
+  }
+}
+[2023-07-06 11:13:07Z INFO JobRunner] Job ID 61c41d48-2780-5525-c887-5750df446f65
+[2023-07-06 11:13:07Z INFO JobRunner] Creating job server with URL: https://pipelines.actions.githubusercontent.com/P5jhKlOA66ytK8yODlNmZhDVC0nW8GS9I4LCaUyN7hdifp9YPL/
+[2023-07-06 11:13:07Z INFO ConfigurationStore] currentAssemblyLocation: C:\Test\actions-runner\bin\Runner.Worker.dll
+[2023-07-06 11:13:07Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:07Z INFO ConfigurationStore] binPath: C:\Test\actions-runner\bin
+[2023-07-06 11:13:07Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:07Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:07Z INFO ConfigurationStore] RootFolder: C:\Test\actions-runner
+[2023-07-06 11:13:07Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:07Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:07Z INFO HostContext] Well known config file 'Runner': 'C:\Test\actions-runner\.runner'
+[2023-07-06 11:13:07Z INFO ConfigurationStore] ConfigFilePath: C:\Test\actions-runner\.runner
+[2023-07-06 11:13:07Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:07Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:07Z INFO HostContext] Well known config file 'Credentials': 'C:\Test\actions-runner\.credentials'
+[2023-07-06 11:13:07Z INFO ConfigurationStore] CredFilePath: C:\Test\actions-runner\.credentials
+[2023-07-06 11:13:07Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:07Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:07Z INFO HostContext] Well known config file 'MigratedCredentials': 'C:\Test\actions-runner\.credentials_migrated'
+[2023-07-06 11:13:07Z INFO ConfigurationStore] MigratedCredFilePath: C:\Test\actions-runner\.credentials_migrated
+[2023-07-06 11:13:07Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:07Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:07Z INFO HostContext] Well known config file 'Service': 'C:\Test\actions-runner\.service'
+[2023-07-06 11:13:07Z INFO ConfigurationStore] ServiceConfigFilePath: C:\Test\actions-runner\.service
+[2023-07-06 11:13:07Z INFO ConfigurationStore] Read setting file: 290 chars
+[2023-07-06 11:13:07Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-06 11:13:07Z INFO Worker] Listening for cancel message from the channel.
+[2023-07-06 11:13:07Z INFO Worker] Waiting for the job to complete or for a cancel message from the channel.
+[2023-07-06 11:13:09Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-06 11:13:09Z INFO JobServer] Creating websocket client ...wss://pipelines.actions.githubusercontent.com/P5jhKlOA66ytK8yODlNmZhDVC0nW8GS9I4LCaUyN7hdifp9YPL/00000000-0000-0000-0000-000000000000/_apis/distributedtask/hubs/Actions/plans/ea27600f-11f2-4bfc-a9fa-c7b83195cca8/timelines/ea27600f-11f2-4bfc-a9fa-c7b83195cca8/records/61c41d48-2780-5525-c887-5750df446f65/feedstream?api-version=6.0-preview
+[2023-07-06 11:13:09Z INFO JobServer] Attempting to start websocket client with delay 00:00:00.
+[2023-07-06 11:13:09Z INFO JobServerQueue] Start process web console line queue.
+[2023-07-06 11:13:09Z INFO JobServerQueue] Start process file upload queue.
+[2023-07-06 11:13:09Z INFO JobServerQueue] Start results file upload queue.
+[2023-07-06 11:13:09Z INFO JobServerQueue] Starting results-based upload queue...
+[2023-07-06 11:13:09Z INFO JobServerQueue] Start process timeline update queue.
+[2023-07-06 11:13:09Z INFO ExecutionContext] Initialize GitHub context
+[2023-07-06 11:13:09Z INFO ExecutionContext] Initialize Env context
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Diag': 'C:\Test\actions-runner\_diag'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Diag': 'C:\Test\actions-runner\_diag'
+[2023-07-06 11:13:09Z INFO JobRunner] Starting the job execution context.
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Work': 'C:\Test\actions-runner\_work'
+[2023-07-06 11:13:09Z INFO JobRunner] Validating directory permissions for: 'C:\Test\actions-runner\_work'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Work': 'C:\Test\actions-runner\_work'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Tools': 'C:\Test\actions-runner\_work\_tool'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Work': 'C:\Test\actions-runner\_work'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Temp': 'C:\Test\actions-runner\_work\_temp'
+[2023-07-06 11:13:09Z INFO JobRunner] Getting job extension.
+[2023-07-06 11:13:09Z INFO JobRunner] Initialize job. Getting all job steps.
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Diag': 'C:\Test\actions-runner\_diag'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Diag': 'C:\Test\actions-runner\_diag'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:09Z INFO HostContext] Well known config file 'Credentials': 'C:\Test\actions-runner\.credentials'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:09Z INFO HostContext] Well known config file 'SetupInfo': 'C:\Test\actions-runner\.setup_info'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Work': 'C:\Test\actions-runner\_work'
+[2023-07-06 11:13:09Z INFO PipelineDirectoryManager] Loading tracking config if exists: C:\Test\actions-runner\_work\_PipelineMapping\ruchir10/Test\PipelineFolder.json
+[2023-07-06 11:13:09Z INFO PipelineDirectoryManager] Updating job run properties.
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Work': 'C:\Test\actions-runner\_work'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Work': 'C:\Test\actions-runner\_work'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Work': 'C:\Test\actions-runner\_work'
+[2023-07-06 11:13:09Z INFO JobExtension] Downloading actions
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Work': 'C:\Test\actions-runner\_work'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Actions': 'C:\Test\actions-runner\_work\_actions'
+[2023-07-06 11:13:09Z INFO JobExtension] Adding .
+[2023-07-06 11:13:09Z INFO JobExtension] Adding .
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Diag': 'C:\Test\actions-runner\_diag'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Diag': 'C:\Test\actions-runner\_diag'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Diag': 'C:\Test\actions-runner\_diag'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Diag': 'C:\Test\actions-runner\_diag'
+[2023-07-06 11:13:09Z INFO JobExtension] Total accessible running process: 304.
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Work': 'C:\Test\actions-runner\_work'
+[2023-07-06 11:13:09Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "setup_job",
+  "type": "runner",
+  "stage": "Pre",
+  "stepId": "c29a5e5f-d3a2-4eec-b52f-3034fc7168dc",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1,
+  "startTime": "2023-07-06T11:13:09.2195465Z",
+  "finishTime": "2023-07-06T11:13:09.3128912Z"
+}.
+[2023-07-06 11:13:09Z INFO JobRunner] Total job steps: 2.
+[2023-07-06 11:13:09Z INFO JobRunner] Run all job steps.
+[2023-07-06 11:13:09Z INFO StepsRunner] Processing step: DisplayName='Terraform Common'
+[2023-07-06 11:13:09Z INFO StepsRunner] Evaluating: success()
+[2023-07-06 11:13:09Z INFO StepsRunner] Result: true
+[2023-07-06 11:13:09Z INFO StepsRunner] Starting the step.
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Work': 'C:\Test\actions-runner\_work'
+[2023-07-06 11:13:09Z INFO StepsRunner] Which: 'chcp'
+[2023-07-06 11:13:09Z INFO StepsRunner] Location: 'C:\Windows\system32\chcp.COM'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper] Starting process:
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\system32\chcp.COM'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Test\actions-runner\_work'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper] Process started with process id 2784, waiting for process exit.
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper] Finished process 2784 with exit code 0, and elapsed time 00:00:00.0193341.
+[2023-07-06 11:13:09Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Work': 'C:\Test\actions-runner\_work'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Temp': 'C:\Test\actions-runner\_work\_temp'
+[2023-07-06 11:13:09Z INFO ExecutionContext] Write event payload to C:\Test\actions-runner\_work\_temp\_github_workflow\event.json
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Work': 'C:\Test\actions-runner\_work'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Temp': 'C:\Test\actions-runner\_work\_temp'
+[2023-07-06 11:13:09Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2023-07-06 11:13:09Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathFileCommand, Runner.Worker
+[2023-07-06 11:13:09Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvFileCommand, Runner.Worker
+[2023-07-06 11:13:09Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.CreateStepSummaryCommand, Runner.Worker
+[2023-07-06 11:13:09Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateFileCommand, Runner.Worker
+[2023-07-06 11:13:09Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputFileCommand, Runner.Worker
+[2023-07-06 11:13:09Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2023-07-06 11:13:09Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.InternalPluginSetRepoPathCommandExtension, Runner.Worker
+[2023-07-06 11:13:09Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvCommandExtension, Runner.Worker
+[2023-07-06 11:13:09Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputCommandExtension, Runner.Worker
+[2023-07-06 11:13:09Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateCommandExtension, Runner.Worker
+[2023-07-06 11:13:09Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathCommandExtension, Runner.Worker
+[2023-07-06 11:13:09Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMaskCommandExtension, Runner.Worker
+[2023-07-06 11:13:09Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMatcherCommandExtension, Runner.Worker
+[2023-07-06 11:13:09Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.RemoveMatcherCommandExtension, Runner.Worker
+[2023-07-06 11:13:09Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.WarningCommandExtension, Runner.Worker
+[2023-07-06 11:13:09Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.ErrorCommandExtension, Runner.Worker
+[2023-07-06 11:13:09Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.NoticeCommandExtension, Runner.Worker
+[2023-07-06 11:13:09Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.DebugCommandExtension, Runner.Worker
+[2023-07-06 11:13:09Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.GroupCommandExtension, Runner.Worker
+[2023-07-06 11:13:09Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EndGroupCommandExtension, Runner.Worker
+[2023-07-06 11:13:09Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EchoCommandExtension, Runner.Worker
+[2023-07-06 11:13:09Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2023-07-06 11:13:09Z INFO ActionCommandManager] Register action command extension for command set-env
+[2023-07-06 11:13:09Z INFO ActionCommandManager] Register action command extension for command set-output
+[2023-07-06 11:13:09Z INFO ActionCommandManager] Register action command extension for command save-state
+[2023-07-06 11:13:09Z INFO ActionCommandManager] Register action command extension for command add-path
+[2023-07-06 11:13:09Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2023-07-06 11:13:09Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2023-07-06 11:13:09Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2023-07-06 11:13:09Z INFO ActionCommandManager] Register action command extension for command warning
+[2023-07-06 11:13:09Z INFO ActionCommandManager] Register action command extension for command error
+[2023-07-06 11:13:09Z INFO ActionCommandManager] Register action command extension for command notice
+[2023-07-06 11:13:09Z INFO ActionCommandManager] Register action command extension for command debug
+[2023-07-06 11:13:09Z INFO ActionCommandManager] Register action command extension for command group
+[2023-07-06 11:13:09Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2023-07-06 11:13:09Z INFO ActionCommandManager] Register action command extension for command echo
+[2023-07-06 11:13:09Z INFO ScriptHandler] Which: 'pwsh'
+[2023-07-06 11:13:09Z INFO ScriptHandler] pwsh: command not found. Make sure 'pwsh' is installed and its location included in the 'Path' environment variable.
+[2023-07-06 11:13:09Z INFO ScriptHandler] Defaulting to powershell
+[2023-07-06 11:13:09Z INFO ScriptHandler] Which: 'powershell'
+[2023-07-06 11:13:09Z INFO ScriptHandler] Location: 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Work': 'C:\Test\actions-runner\_work'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Temp': 'C:\Test\actions-runner\_work\_temp'
+[2023-07-06 11:13:09Z INFO ScriptHandler] Which: 'pwsh'
+[2023-07-06 11:13:09Z INFO ScriptHandler] pwsh: command not found. Make sure 'pwsh' is installed and its location included in the 'Path' environment variable.
+[2023-07-06 11:13:09Z INFO ScriptHandler] Defaulting to powershell
+[2023-07-06 11:13:09Z INFO ScriptHandler] Which: 'powershell'
+[2023-07-06 11:13:09Z INFO ScriptHandler] Location: 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper] Starting process:
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   Arguments: '-command ". 'C:\Test\actions-runner\_work\_temp\2db49363-17c8-4227-b5ed-374b0046c95e.ps1'"'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Test\actions-runner\_work\Test\Test'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper] Process started with process id 11752, waiting for process exit.
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper] Finished process 11752 with exit code 0, and elapsed time 00:00:00.3899580.
+[2023-07-06 11:13:09Z INFO CreateStepSummaryCommand] Step Summary file (C:\Test\actions-runner\_work\_temp\_runner_file_commands\step_summary_8414a6c7-d185-442e-852b-f92198dbdcec) is empty; skipping attachment upload
+[2023-07-06 11:13:09Z INFO StepsRunner] Step result: 
+[2023-07-06 11:13:09Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "powershell",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "f49fcc7e-8e59-5a3e-bcf2-6cba91195ec9",
+  "stepContextName": "__run",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1,
+  "startTime": "2023-07-06T11:13:09.333565Z",
+  "finishTime": "2023-07-06T11:13:09.8615462Z"
+}.
+[2023-07-06 11:13:09Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2023-07-06 11:13:09Z INFO StepsRunner] Current state: job state = ''
+[2023-07-06 11:13:09Z INFO StepsRunner] Processing step: DisplayName='Terraform Environment'
+[2023-07-06 11:13:09Z INFO StepsRunner] Evaluating: success()
+[2023-07-06 11:13:09Z INFO StepsRunner] Result: true
+[2023-07-06 11:13:09Z INFO StepsRunner] Starting the step.
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Work': 'C:\Test\actions-runner\_work'
+[2023-07-06 11:13:09Z INFO StepsRunner] Which: 'chcp'
+[2023-07-06 11:13:09Z INFO StepsRunner] Location: 'C:\Windows\system32\chcp.COM'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper] Starting process:
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\system32\chcp.COM'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Test\actions-runner\_work'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper] Process started with process id 13208, waiting for process exit.
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper] Finished process 13208 with exit code 0, and elapsed time 00:00:00.0064321.
+[2023-07-06 11:13:09Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Work': 'C:\Test\actions-runner\_work'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Temp': 'C:\Test\actions-runner\_work\_temp'
+[2023-07-06 11:13:09Z INFO ExecutionContext] Write event payload to C:\Test\actions-runner\_work\_temp\_github_workflow\event.json
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Work': 'C:\Test\actions-runner\_work'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Temp': 'C:\Test\actions-runner\_work\_temp'
+[2023-07-06 11:13:09Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2023-07-06 11:13:09Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2023-07-06 11:13:09Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2023-07-06 11:13:09Z INFO ActionCommandManager] Register action command extension for command set-env
+[2023-07-06 11:13:09Z INFO ActionCommandManager] Register action command extension for command set-output
+[2023-07-06 11:13:09Z INFO ActionCommandManager] Register action command extension for command save-state
+[2023-07-06 11:13:09Z INFO ActionCommandManager] Register action command extension for command add-path
+[2023-07-06 11:13:09Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2023-07-06 11:13:09Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2023-07-06 11:13:09Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2023-07-06 11:13:09Z INFO ActionCommandManager] Register action command extension for command warning
+[2023-07-06 11:13:09Z INFO ActionCommandManager] Register action command extension for command error
+[2023-07-06 11:13:09Z INFO ActionCommandManager] Register action command extension for command notice
+[2023-07-06 11:13:09Z INFO ActionCommandManager] Register action command extension for command debug
+[2023-07-06 11:13:09Z INFO ActionCommandManager] Register action command extension for command group
+[2023-07-06 11:13:09Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2023-07-06 11:13:09Z INFO ActionCommandManager] Register action command extension for command echo
+[2023-07-06 11:13:09Z INFO ScriptHandler] Which: 'pwsh'
+[2023-07-06 11:13:09Z INFO ScriptHandler] pwsh: command not found. Make sure 'pwsh' is installed and its location included in the 'Path' environment variable.
+[2023-07-06 11:13:09Z INFO ScriptHandler] Defaulting to powershell
+[2023-07-06 11:13:09Z INFO ScriptHandler] Which: 'powershell'
+[2023-07-06 11:13:09Z INFO ScriptHandler] Location: 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Work': 'C:\Test\actions-runner\_work'
+[2023-07-06 11:13:09Z INFO HostContext] Well known directory 'Temp': 'C:\Test\actions-runner\_work\_temp'
+[2023-07-06 11:13:09Z INFO ScriptHandler] Which: 'pwsh'
+[2023-07-06 11:13:09Z INFO ScriptHandler] pwsh: command not found. Make sure 'pwsh' is installed and its location included in the 'Path' environment variable.
+[2023-07-06 11:13:09Z INFO ScriptHandler] Defaulting to powershell
+[2023-07-06 11:13:09Z INFO ScriptHandler] Which: 'powershell'
+[2023-07-06 11:13:09Z INFO ScriptHandler] Location: 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper] Starting process:
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   Arguments: '-command ". 'C:\Test\actions-runner\_work\_temp\010b0ee1-1189-4e03-b8b0-a343b10ffc32.ps1'"'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Test\actions-runner\_work\Test\Test'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-07-06 11:13:09Z INFO ProcessInvokerWrapper] Process started with process id 18416, waiting for process exit.
+[2023-07-06 11:13:10Z INFO JobServerQueue] Job timeline record has been updated for the first time.
+[2023-07-06 11:13:10Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-06 11:13:10Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-07-06 11:13:10Z INFO ProcessInvokerWrapper] Finished process 18416 with exit code 0, and elapsed time 00:00:00.3816945.
+[2023-07-06 11:13:10Z INFO CreateStepSummaryCommand] Step Summary file (C:\Test\actions-runner\_work\_temp\_runner_file_commands\step_summary_be44c143-9683-451c-98f9-4ad1a37a3133) is empty; skipping attachment upload
+[2023-07-06 11:13:10Z INFO StepsRunner] Step result: 
+[2023-07-06 11:13:10Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "powershell",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "93e08cf3-d96a-5d2a-45d0-aa3d60acb502",
+  "stepContextName": "__run_2",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1,
+  "startTime": "2023-07-06T11:13:09.8622505Z",
+  "finishTime": "2023-07-06T11:13:10.2687113Z"
+}.
+[2023-07-06 11:13:10Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2023-07-06 11:13:10Z INFO StepsRunner] Current state: job state = ''
+[2023-07-06 11:13:10Z INFO JobRunner] Finalize job.
+[2023-07-06 11:13:10Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:10Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:10Z INFO HostContext] Well known directory 'Diag': 'C:\Test\actions-runner\_diag'
+[2023-07-06 11:13:10Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:10Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:10Z INFO HostContext] Well known directory 'Diag': 'C:\Test\actions-runner\_diag'
+[2023-07-06 11:13:10Z INFO JobExtension] Initialize Env context
+[2023-07-06 11:13:10Z INFO JobExtension] Initialize steps context
+[2023-07-06 11:13:10Z INFO JobExtension] Total accessible running process: 304.
+[2023-07-06 11:13:10Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "complete_job",
+  "type": "runner",
+  "stage": "Post",
+  "stepId": "af7526f6-85c2-4d25-8f9e-c9dd7f62af9e",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1,
+  "startTime": "2023-07-06T11:13:10.2765598Z",
+  "finishTime": "2023-07-06T11:13:10.2825663Z"
+}.
+[2023-07-06 11:13:10Z INFO JobRunner] Job result after all job steps finish: Succeeded
+[2023-07-06 11:13:10Z INFO JobRunner] Completing the job execution context.
+[2023-07-06 11:13:10Z INFO JobRunner] Shutting down the job server queue.
+[2023-07-06 11:13:10Z INFO JobServerQueue] Fire signal to shutdown all queues.
+[2023-07-06 11:13:10Z INFO JobServer] Successfully started websocket client.
+[2023-07-06 11:13:10Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c29a5e5f-d3a2-4eec-b52f-3034fc7168dc', success rate: 1/1.
+[2023-07-06 11:13:10Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'f49fcc7e-8e59-5a3e-bcf2-6cba91195ec9', success rate: 1/1.
+[2023-07-06 11:13:11Z INFO JobServerQueue] Try to upload 2 log files or attachments, success rate: 2/2.
+[2023-07-06 11:13:12Z INFO JobServerQueue] All queue process task stopped.
+[2023-07-06 11:13:12Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'f49fcc7e-8e59-5a3e-bcf2-6cba91195ec9', success rate: 1/1.
+[2023-07-06 11:13:12Z INFO JobServerQueue] Try to append 1 batches web console lines for record '93e08cf3-d96a-5d2a-45d0-aa3d60acb502', success rate: 1/1.
+[2023-07-06 11:13:12Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'af7526f6-85c2-4d25-8f9e-c9dd7f62af9e', success rate: 1/1.
+[2023-07-06 11:13:12Z INFO JobServerQueue] Web console line queue drained.
+[2023-07-06 11:13:12Z INFO JobServerQueue] Uploading 3 files in one shot.
+[2023-07-06 11:13:14Z INFO JobServerQueue] Try to upload 3 log files or attachments, success rate: 3/3.
+[2023-07-06 11:13:14Z INFO JobServerQueue] File upload queue drained.
+[2023-07-06 11:13:14Z INFO JobServerQueue] Starting results-based upload queue...
+[2023-07-06 11:13:14Z INFO JobServerQueue] Results upload queue drained.
+[2023-07-06 11:13:14Z INFO JobServerQueue] Timeline update queue drained.
+[2023-07-06 11:13:14Z INFO JobServerQueue] Disposing job server ...
+[2023-07-06 11:13:14Z INFO JobServerQueue] Disposing results server ...
+[2023-07-06 11:13:14Z INFO JobServerQueue] All queue process tasks have been stopped, and all queues are drained.
+[2023-07-06 11:13:14Z INFO TempDirectoryManager] Cleaning runner temp folder: C:\Test\actions-runner\_work\_temp
+[2023-07-06 11:13:14Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-06 11:13:14Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-06 11:13:14Z INFO HostContext] Well known directory 'Diag': 'C:\Test\actions-runner\_diag'
+[2023-07-06 11:13:14Z INFO HostContext] Well known config file 'Telemetry': 'C:\Test\actions-runner\_diag\.telemetry'
+[2023-07-06 11:13:14Z INFO JobRunner] Raising job completed event
+[2023-07-06 11:13:14Z INFO Worker] Job completed.
