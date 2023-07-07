@@ -5,12 +5,11 @@ on:
     branches:
       - main
 
-env:
-  DEPLOY_ENV: ${{ github.event.inputs.environment }}
-
 jobs:
   sync:
     runs-on: ubuntu-latest
+    env:
+      DEPLOY_ENV: ${{ github.event.inputs.environment }}
     if: ${{ env.DEPLOY_ENV == 'sync' }}
 
     steps:
@@ -33,6 +32,8 @@ jobs:
   TerraformToTeam:
     runs-on: self-hosted
     environment: Team
+    env:
+      DEPLOY_ENV: ${{ github.event.inputs.environment }}
     if: ${{ env.DEPLOY_ENV == 'team' }}
 
     steps:
@@ -54,6 +55,8 @@ jobs:
   TerraformToInteg:
     runs-on: self-hosted
     environment: Integ
+    env:
+      DEPLOY_ENV: ${{ github.event.inputs.environment }}
     if: ${{ env.DEPLOY_ENV == 'integ' }}
 
     steps:
@@ -75,6 +78,8 @@ jobs:
   TerraformToProd:
     runs-on: self-hosted
     environment: Production
+    env:
+      DEPLOY_ENV: ${{ github.event.inputs.environment }}
     if: ${{ env.DEPLOY_ENV == 'prod' }}
 
     steps:
