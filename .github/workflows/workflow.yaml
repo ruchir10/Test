@@ -5,10 +5,13 @@ on:
     branches:
       - main
 
+env:
+  DEPLOY_ENV: ${{ github.event.inputs.environment }}
+
 jobs:
   sync:
     runs-on: ubuntu-latest
-    if: ${{ github.event.inputs.environment == 'sync' }}
+    if: ${{ env.DEPLOY_ENV == 'sync' }}
 
     steps:
       - name: Checkout code
@@ -30,7 +33,7 @@ jobs:
   TerraformToTeam:
     runs-on: self-hosted
     environment: Team
-    if: ${{ github.event.inputs.environment == 'team' }}
+    if: ${{ env.DEPLOY_ENV == 'team' }}
 
     steps:
       - name: Terraform Common
@@ -51,7 +54,7 @@ jobs:
   TerraformToInteg:
     runs-on: self-hosted
     environment: Integ
-    if: ${{ github.event.inputs.environment == 'integ' }}
+    if: ${{ env.DEPLOY_ENV == 'integ' }}
 
     steps:
       - name: Terraform Common
@@ -72,7 +75,7 @@ jobs:
   TerraformToProd:
     runs-on: self-hosted
     environment: Production
-    if: ${{ github.event.inputs.environment == 'prod' }}
+    if: ${{ env.DEPLOY_ENV == 'prod' }}
 
     steps:
       - name: Terraform Common
@@ -81,9 +84,3 @@ jobs:
           echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}"
           echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}"
           echo "ENVIRONMENT=common"
-
-          
- inputs:
-  environment:
-    description: 'The environment to deploy'
-    default: 'sync'
