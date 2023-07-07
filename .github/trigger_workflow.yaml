@@ -1,0 +1,28 @@
+name: Trigger Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'The environment to deploy'
+        required: true
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Workflow
+        uses: actions/github-script@v4
+        with:
+          github-token: ${{ secrets.PAT }}
+          script: |
+            const response = await octokit.request('POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches', {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'workflow.yaml',  // Replace with your main workflow file name
+              ref: context.ref,
+              inputs: {
+                environment: '${{ github.event.inputs.environment }}'
+              }
+            });
+            console.log(response.status);
