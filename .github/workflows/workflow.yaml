@@ -8,6 +8,7 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.environment == 'sync' }}
 
     steps:
       - name: Checkout code
@@ -29,6 +30,7 @@ jobs:
   TerraformToTeam:
     runs-on: self-hosted
     environment: Team
+    if: ${{ github.event.inputs.environment == 'team' }}
     env:
       TARGET: team
     needs: [sync]
@@ -52,6 +54,7 @@ jobs:
   TerraformToInteg:
     runs-on: self-hosted
     environment: Integ
+    if: ${{ github.event.inputs.environment == 'integ' }}
     env:
       TARGET: integ
     needs: [TerraformToTeam]
@@ -75,6 +78,7 @@ jobs:
   TerraformToProd:
     runs-on: self-hosted
     environment: Production
+    if: ${{ github.event.inputs.environment == 'prod' }}
     env:
       TARGET: prod
     needs: [TerraformToInteg]
