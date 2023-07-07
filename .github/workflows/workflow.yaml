@@ -81,10 +81,11 @@ jobs:
           echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}"
           echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}"
           echo "ENVIRONMENT=common"
-inputs:
-  environment: 'integ'
+
+  inputs:
+    environment: 'integ'
     description: 'The environment to deploy'
-    required: true
+     required: true
     default: 'sync'
     
 #sdfdv
