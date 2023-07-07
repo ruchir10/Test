@@ -82,7 +82,8 @@ jobs:
           echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}"
           echo "ENVIRONMENT=common"
 inputs:
-   environment: 'integ'
-     description: 'The environment to deploy'
-     required: true
-     default: 'sync'
+  environment: 'integ'
+    description: 'The environment to deploy'
+    required: true
+    default: 'sync'
+    
