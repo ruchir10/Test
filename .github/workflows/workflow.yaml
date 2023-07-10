@@ -9,7 +9,6 @@ on:
     environment:
       description: 'Environment for Terraform'
       required: true
-      default: 'integ'  # Set a default value if needed
 
 jobs:
   sync:
@@ -28,7 +27,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
           bucket_name="test21223"
-          aws s3 sync . "s3://test21223" --include "*.py" --delete
+          aws s3 sync . "s3://test21223" --recursive --include "*.py" 
 
   TerraformToTeam:
     needs: sync
@@ -52,7 +51,7 @@ jobs:
   TerraformToInteg:
     needs: sync
     runs-on: ubuntu-latest
-    if: ${{ github.event.inputs.environment == 'integ' || github.event.inputs.environment == 'terraformtointeg' }}
+    if: ${{ github.event.inputs.environment == 'integ'}}
     steps:
       - name: Terraform Common
         run: |
@@ -86,3 +85,11 @@ jobs:
           echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}"
           echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}"
           echo "ENVIRONMENT=prod"
+
+  ManualTrigger:
+    needs: sync
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch'
+    steps:
+      - name: Run workflow
+        run: gh workflow run workflow.yaml -f environment=${{ github.event.inputs.environment }}
