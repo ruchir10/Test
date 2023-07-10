@@ -5,10 +5,11 @@ on:
     branches:
       - main
   workflow_dispatch:  # Add workflow_dispatch event for manual triggering
-   inputs:
-    environment:
-      description: 'Environment for Terraform'
-      required: true
+    inputs:
+      environment:
+        description: 'Environment for Terraform'
+        required: true
+        default: 'prod'
 
 jobs:
   sync:
@@ -27,7 +28,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
           bucket_name="test21223"
-          aws s3 sync . "s3://test21223" --include "*.py" --delete
+          aws s3 sync . "s3://test21223" --recursive --include "*.py" 
 
   TerraformToTeam:
     needs: sync
@@ -85,11 +86,3 @@ jobs:
           echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}"
           echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}"
           echo "ENVIRONMENT=prod"
-
-  ManualTrigger:
-    needs: sync
-    runs-on: ubuntu-latest
-    if: github.event_name == 'workflow_dispatch'
-    steps:
-      - name: Run workflow
-        run: gh workflow run workflow.yaml -f environment=terraformtointeg
