@@ -31,7 +31,7 @@ jobs:
           aws s3 sync . "s3://test21223" --include "*.py" --delete
 
   TerraformToTeam:
-    needs: sync
+    needs: [sync]
     runs-on: ubuntu-latest
     if: ${{ github.event.inputs.environment == 'team'}}
     steps:
@@ -50,7 +50,7 @@ jobs:
           echo "ENVIRONMENT=team"
 
   TerraformToInteg:
-    needs: sync
+    needs: [sync]
     runs-on: ubuntu-latest
     if: ${{ github.event.inputs.environment == 'integ'}}
     steps:
@@ -69,7 +69,7 @@ jobs:
           echo "ENVIRONMENT=integ"
 
   TerraformToProd:
-    needs: sync
+    needs: [sync]
     runs-on: ubuntu-latest
     if: ${{ github.event.inputs.environment == 'prod' }}
     steps:
