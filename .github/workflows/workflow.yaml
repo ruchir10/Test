@@ -92,4 +92,4 @@ jobs:
     if: github.event_name == 'workflow_dispatch'
     steps:
       - name: Run workflow
-        run: gh workflow run workflow.yaml -f environment=${{ github.event.inputs.environment }}
+        run: gh workflow run workflow.yaml -f environment=integ
