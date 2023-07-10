@@ -71,7 +71,7 @@ jobs:
   TerraformToProd:
     needs: sync
     runs-on: ubuntu-latest
-    if: ${{ github.event.inputs.environment == 'prod' || github.event.inputs.environment == 'terraformtointeg' }}
+    if: ${{ github.event.inputs.environment == 'prod' }}
     steps:
       - name: Terraform Common
         run: |
