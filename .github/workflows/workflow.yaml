@@ -9,7 +9,7 @@ on:
     environment:
       description: 'Environment for Terraform'
       required: true
-      default: 'team'  # Set a default value if needed
+      default: 'integ'  # Set a default value if needed
 
 jobs:
   sync:
@@ -33,7 +33,7 @@ jobs:
   TerraformToTeam:
     needs: sync
     runs-on: ubuntu-latest
-    if: ${{ github.event.inputs.environment == 'team' }}
+    if: ${{ github.event.inputs.environment == 'team'}}
     steps:
       - name: Terraform Common
         run: |
@@ -52,7 +52,7 @@ jobs:
   TerraformToInteg:
     needs: sync
     runs-on: ubuntu-latest
-    if: ${{ github.event.inputs.environment == 'integ' }}
+    if: ${{ github.event.inputs.environment == 'integ' || github.event.inputs.environment == 'terraformtointeg' }}
     steps:
       - name: Terraform Common
         run: |
@@ -71,7 +71,7 @@ jobs:
   TerraformToProd:
     needs: sync
     runs-on: ubuntu-latest
-    if: ${{ github.event.inputs.environment == 'prod' }}
+    if: ${{ github.event.inputs.environment == 'prod' || github.event.inputs.environment == 'terraformtointeg' }}
     steps:
       - name: Terraform Common
         run: |
