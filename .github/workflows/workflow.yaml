@@ -27,6 +27,7 @@ jobs:
   TerraformToTeam:
     needs: sync
     runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.environment == 'team' }}
     steps:
       - name: Terraform Common
         run: |
@@ -45,6 +46,7 @@ jobs:
   TerraformToInteg:
     needs: sync
     runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.environment == 'terraformtointeg' }}  # Modified condition
     steps:
       - name: Terraform Common
         run: |
@@ -58,11 +60,12 @@ jobs:
           echo "Running Terraform Environment"
           echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}"
           echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}"
-          echo "ENVIRONMENT=integ"
+          echo "ENVIRONMENT=integ"  # Modified environment value
 
   TerraformToProd:
     needs: sync
     runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.environment == 'prod' }}
     steps:
       - name: Terraform Common
         run: |
