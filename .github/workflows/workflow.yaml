@@ -25,7 +25,7 @@ jobs:
           aws s3 sync . "s3://test21223" --include "*.py" --delete
 
   TerraformToTeam:
-    needs: sync
+    needs: [sync, TerraformToInteg]  # Adding TerraformToInteg as a dependency
     runs-on: ubuntu-latest
     if: ${{ github.event.inputs.environment == 'team' }}
     steps:
