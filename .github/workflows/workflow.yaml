@@ -15,7 +15,7 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     outputs:
-      environment: ${{ needs.sync.outputs.environment }}
+      environment: ${{ github.event.inputs.environment }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -30,14 +30,10 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
           bucket_name="test21223"
-          aws s3 sync . "s3://test21223" --include "*.py" --delete
-
-      - name: Set environment output
-        id: set_env_output
-        run: echo "::set-output name=environment::${{ github.event.inputs.environment }}"
+          aws s3 sync . "s3://test21223" --recursive --include "*.py" 
 
   TerraformToTeam:
-    needs: sync
+    needs: [sync]
     runs-on: ubuntu-latest
     if: ${{ needs.sync.outputs.environment == 'team' }}
     steps:
@@ -56,7 +52,7 @@ jobs:
           echo "ENVIRONMENT=team"
 
   TerraformToInteg:
-    needs: sync
+    needs: [sync]
     runs-on: ubuntu-latest
     if: ${{ needs.sync.outputs.environment == 'integ' }}
     steps:
@@ -75,7 +71,7 @@ jobs:
           echo "ENVIRONMENT=integ"
 
   TerraformToProd:
-    needs: sync
+    needs: [sync]
     runs-on: ubuntu-latest
     if: ${{ needs.sync.outputs.environment == 'prod' }}
     steps:
