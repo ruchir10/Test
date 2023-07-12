@@ -1,4 +1,15 @@
-# Include workflow files for each environment
+name: Sync S3 with GitHub
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:  # Add workflow_dispatch event for manual triggering
+   inputs:
+    environment:
+      description: 'Environment for Terraform'
+      required: true
+      
 jobs:
   sync:
     runs-on: ubuntu-latest
