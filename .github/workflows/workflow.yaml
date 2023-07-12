@@ -30,6 +30,6 @@ jobs:
           aws s3 sync . "s3://test21223" --include "*.py" --delete
 
    # Include workflow files for each environment
-  - include: workflows/prod.yaml
+   - include: workflows/prod.yaml
   - include: workflows/integ.yaml
   - include: workflows/team.yaml
