@@ -1,21 +1,7 @@
-name: Sync S3 with GitHub
-
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:  # Add workflow_dispatch event for manual triggering
-    inputs:
-      environment:
-        description: 'Environment for Terraform'
-        required: true
-        default: 'prod'
-
+# Include workflow files for each environment
 jobs:
   sync:
     runs-on: ubuntu-latest
-    outputs:
-      environment: ${{ github.event.inputs.environment }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -32,7 +18,7 @@ jobs:
           bucket_name="test21223"
           aws s3 sync . "s3://test21223" --include "*.py" --delete
 
-# Include workflow files for each environment
-- include: workflows/prod.yaml
-- include: workflows/integ.yaml
-- include: workflows/team.yaml
+   # Include workflow files for each environment
+  - include: workflows/prod.yaml
+  - include: workflows/integ.yaml
+  - include: workflows/team.yaml
