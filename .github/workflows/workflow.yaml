@@ -24,3 +24,4 @@ jobs:
         run: |
           bucket_name="test21223"
           aws s3 sync . "s3://test21223" --include "*.py" --delete
+#jggjg
