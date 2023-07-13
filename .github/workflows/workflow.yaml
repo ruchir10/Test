@@ -5,15 +5,17 @@ on:
     branches:
       - main
   workflow_dispatch:  # Add workflow_dispatch event for manual triggering
-   inputs:
-    environment:
-      description: 'Environment for Terraform'
-      required: true
-      
+    inputs:
+      environment:
+        description: 'Environment for Terraform'
+        required: true
 
 jobs:
   sync:
     runs-on: ubuntu-latest
+
+    if: github.event_name == 'workflow_dispatch' || contains(['prod', 'team', 'integ'], github.event.inputs.environment)
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -29,6 +31,3 @@ jobs:
         run: |
           bucket_name="test21223"
           aws s3 sync . "s3://test21223" --include "*.py" --delete
-     
-
-
