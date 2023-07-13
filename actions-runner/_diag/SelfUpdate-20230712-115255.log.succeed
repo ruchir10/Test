@@ -1,0 +1,20 @@
+[Wed 07/12/2023 17:22:55.84] --------whoami-------- 
+nt authority\network service
+[Wed 07/12/2023 17:22:55.87] --------whoami-------- 
+[Wed 07/12/2023 17:22:55.88] Waiting for Runner.Listener.exe (4824) to complete 
+Runner.Listener.exe           4824 Services                   0     75,100 K
+[Wed 07/12/2023 17:22:56.00] Process 4824 still running, check again after 1 second. 
+[Wed 07/12/2023 17:23:04.87] Process 4824 finished running 
+[Wed 07/12/2023 17:23:04.87] Sleep 1 more second to make sure process exited 
+[Wed 07/12/2023 17:23:13.82] Re-organize folders 
+[Wed 07/12/2023 17:23:13.85] move "C:\Test\actions-runner\bin" "C:\Test\actions-runner\bin.2.305.0" 
+        1 dir(s) moved.
+[Wed 07/12/2023 17:23:13.87] move "C:\Test\actions-runner\externals" "C:\Test\actions-runner\externals.2.305.0" 
+        1 dir(s) moved.
+[Wed 07/12/2023 17:23:13.88] Create junction bin folder 
+Junction created for C:\Test\actions-runner\bin <<===>> C:\Test\actions-runner\bin.2.306.0
+[Wed 07/12/2023 17:23:13.89] Create junction externals folder 
+Junction created for C:\Test\actions-runner\externals <<===>> C:\Test\actions-runner\externals.2.306.0
+[Wed 07/12/2023 17:23:13.90] Update succeed 
+[Wed 07/12/2023 17:23:13.91] update.finished file creation succeed 
+[Wed 07/12/2023 17:23:13.91] Rename "C:\Test\actions-runner\_diag\SelfUpdate-20230712-115255.log" to be "C:\Test\actions-runner\_diag\SelfUpdate-20230712-115255.log.succeed" 

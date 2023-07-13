@@ -10,6 +10,7 @@ on:
       description: 'Environment for Terraform'
       required: true
       
+
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -27,9 +28,64 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
           bucket_name="test21223"
-          aws s3 sync . "s3://test21223" --include "*.py" --delete
+          aws s3 sync . "s3://test21223" --recursive --include "*.py" 
+     
+         
+  TerraformToTeam:
+    needs: sync
+    runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.environment == 'team'}}
+    steps:
+      - name: Terraform Common
+        run: |
+          echo "Running Terraform Common"
+          echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}"
+          echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}"
+          echo "ENVIRONMENT=common"
 
-   # Include workflow files for each environment
-   - include: workflows/prod.yaml
-  - include: workflows/integ.yaml
-  - include: workflows/team.yaml
+      - name: Terraform Environment
+        run: |
+          echo "Running Terraform Environment"
+          echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}"
+          echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}"
+          echo "ENVIRONMENT=team"
+
+  TerraformToInteg:
+    needs: sync
+    runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.environment == 'integ'}}
+    steps:
+      - name: Terraform Common
+        run: |
+          echo "Running Terraform Common"
+          echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}"
+          echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}"
+          echo "ENVIRONMENT=common"
+
+      - name: Terraform Environment
+        run: |
+          echo "Running Terraform Environment"
+          echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}"
+          echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}"
+          echo "ENVIRONMENT=integ"
+
+  TerraformToProd:
+    needs: sync
+    runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.environment == 'prod' }}
+    steps:
+      - name: Terraform Common
+        run: |
+          echo "Running Terraform Common"
+          echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}"
+          echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}"
+          echo "ENVIRONMENT=common"
+
+      - name: Terraform Environment
+        run: |
+          echo "Running Terraform Environment"
+          echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}"
+          echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}"
+          echo "ENVIRONMENT=prod"
+
+

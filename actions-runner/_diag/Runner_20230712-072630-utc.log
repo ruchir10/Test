@@ -1,0 +1,336 @@
+[2023-07-12 07:26:30Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2023-07-12 07:26:30Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-12 07:26:30Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-12 07:26:30Z INFO HostContext] Well known config file 'Credentials': 'C:\Test\actions-runner\.credentials'
+[2023-07-12 07:26:30Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-12 07:26:30Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-12 07:26:30Z INFO HostContext] Well known config file 'Runner': 'C:\Test\actions-runner\.runner'
+[2023-07-12 07:26:30Z INFO Listener] Runner is built for Windows (X64) - win-x64.
+[2023-07-12 07:26:30Z INFO Listener] RuntimeInformation: Microsoft Windows 10.0.22621.
+[2023-07-12 07:26:30Z INFO Listener] Version: 2.305.0
+[2023-07-12 07:26:30Z INFO Listener] Commit: 6cbe663c239dba8a109c6ac2801b25f1ed7c51e9
+[2023-07-12 07:26:30Z INFO Listener] Culture: en-US
+[2023-07-12 07:26:30Z INFO Listener] UI Culture: en-US
+[2023-07-12 07:26:30Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-12 07:26:30Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-12 07:26:30Z INFO Listener] Validating directory permissions for: 'C:\Test\actions-runner'
+[2023-07-12 07:26:30Z INFO CommandLineParser] Parse
+[2023-07-12 07:26:30Z INFO CommandLineParser] Parsing 3 args
+[2023-07-12 07:26:30Z INFO CommandLineParser] parsing argument
+[2023-07-12 07:26:30Z INFO CommandLineParser] HasArgs: False
+[2023-07-12 07:26:30Z INFO CommandLineParser] Adding Command: run
+[2023-07-12 07:26:30Z INFO CommandLineParser] parsing argument
+[2023-07-12 07:26:30Z INFO CommandLineParser] HasArgs: True
+[2023-07-12 07:26:30Z INFO CommandLineParser] arg: startuptype
+[2023-07-12 07:26:30Z INFO CommandLineParser] parsing argument
+[2023-07-12 07:26:30Z INFO CommandLineParser] HasArgs: True
+[2023-07-12 07:26:30Z INFO CommandLineParser] Adding option 'startuptype': 'service'
+[2023-07-12 07:26:30Z INFO Listener] Arguments parsed
+[2023-07-12 07:26:30Z INFO Runner] ExecuteCommand
+[2023-07-12 07:26:30Z INFO ConfigurationStore] currentAssemblyLocation: C:\Test\actions-runner\bin\Runner.Listener.dll
+[2023-07-12 07:26:30Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-12 07:26:30Z INFO ConfigurationStore] binPath: C:\Test\actions-runner\bin
+[2023-07-12 07:26:30Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-12 07:26:30Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-12 07:26:30Z INFO ConfigurationStore] RootFolder: C:\Test\actions-runner
+[2023-07-12 07:26:30Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-12 07:26:30Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-12 07:26:30Z INFO HostContext] Well known config file 'Runner': 'C:\Test\actions-runner\.runner'
+[2023-07-12 07:26:30Z INFO ConfigurationStore] ConfigFilePath: C:\Test\actions-runner\.runner
+[2023-07-12 07:26:30Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-12 07:26:30Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-12 07:26:30Z INFO HostContext] Well known config file 'Credentials': 'C:\Test\actions-runner\.credentials'
+[2023-07-12 07:26:30Z INFO ConfigurationStore] CredFilePath: C:\Test\actions-runner\.credentials
+[2023-07-12 07:26:30Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-12 07:26:30Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-12 07:26:30Z INFO HostContext] Well known config file 'MigratedCredentials': 'C:\Test\actions-runner\.credentials_migrated'
+[2023-07-12 07:26:30Z INFO ConfigurationStore] MigratedCredFilePath: C:\Test\actions-runner\.credentials_migrated
+[2023-07-12 07:26:30Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-12 07:26:30Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-12 07:26:30Z INFO HostContext] Well known config file 'Service': 'C:\Test\actions-runner\.service'
+[2023-07-12 07:26:30Z INFO ConfigurationStore] ServiceConfigFilePath: C:\Test\actions-runner\.service
+[2023-07-12 07:26:30Z INFO CommandSettings] Flag 'help': 'False'
+[2023-07-12 07:26:30Z INFO CommandSettings] Flag 'version': 'False'
+[2023-07-12 07:26:30Z INFO CommandSettings] Flag 'commit': 'False'
+[2023-07-12 07:26:30Z INFO CommandSettings] Flag 'check': 'False'
+[2023-07-12 07:26:30Z INFO CommandSettings] Command 'configure': 'False'
+[2023-07-12 07:26:30Z INFO CommandSettings] Command 'remove': 'False'
+[2023-07-12 07:26:30Z INFO CommandSettings] Command 'warmup': 'False'
+[2023-07-12 07:26:30Z INFO ConfigurationManager] LoadSettings
+[2023-07-12 07:26:30Z INFO ConfigurationStore] IsConfigured()
+[2023-07-12 07:26:30Z INFO ConfigurationStore] IsConfigured: True
+[2023-07-12 07:26:30Z INFO ConfigurationManager] Is configured: True
+[2023-07-12 07:26:30Z INFO ConfigurationStore] Read setting file: 290 chars
+[2023-07-12 07:26:30Z INFO ConfigurationManager] Settings Loaded
+[2023-07-12 07:26:30Z INFO ConfigurationStore] IsServiceConfigured()
+[2023-07-12 07:26:30Z INFO ConfigurationStore] IsServiceConfigured: True
+[2023-07-12 07:26:30Z INFO CommandSettings] Command 'run': 'True'
+[2023-07-12 07:26:30Z INFO ConfigurationStore] IsConfigured()
+[2023-07-12 07:26:30Z INFO ConfigurationStore] IsConfigured: True
+[2023-07-12 07:26:30Z INFO ConfigurationManager] Is configured: True
+[2023-07-12 07:26:30Z INFO Runner] Set runner startup type - Service
+[2023-07-12 07:26:30Z INFO CommandSettings] Flag 'once': 'False'
+[2023-07-12 07:26:30Z INFO CommandSettings] Flag 'once': 'False'
+[2023-07-12 07:26:30Z INFO Runner] RunAsync
+[2023-07-12 07:26:30Z INFO ConfigurationManager] LoadSettings
+[2023-07-12 07:26:30Z INFO ConfigurationStore] IsConfigured()
+[2023-07-12 07:26:30Z INFO ConfigurationStore] IsConfigured: True
+[2023-07-12 07:26:30Z INFO ConfigurationManager] Is configured: True
+[2023-07-12 07:26:30Z INFO ConfigurationManager] Settings Loaded
+[2023-07-12 07:26:30Z INFO MessageListener] {
+  "AgentId": 23,
+  "AgentName": "self-hosted",
+  "PoolId": 1,
+  "PoolName": "Default",
+  "ServerUrl": "https://pipelines.actions.githubusercontent.com/P5jhKlOA66ytK8yODlNmZhDVC0nW8GS9I4LCaUyN7hdifp9YPL",
+  "GitHubUrl": "https://github.com/ruchir10/Test",
+  "WorkFolder": "_work"
+}
+[2023-07-12 07:26:30Z INFO MessageListener] Loading Credentials
+[2023-07-12 07:26:30Z INFO ConfigurationStore] HasCredentials()
+[2023-07-12 07:26:30Z INFO ConfigurationStore] stored True
+[2023-07-12 07:26:30Z INFO CredentialManager] GetCredentialProvider
+[2023-07-12 07:26:30Z INFO CredentialManager] Creating type OAuth
+[2023-07-12 07:26:30Z INFO CredentialManager] Creating credential type: OAuth
+[2023-07-12 07:26:30Z INFO HostContext] Well known directory 'Bin': 'C:\Test\actions-runner\bin'
+[2023-07-12 07:26:30Z INFO HostContext] Well known directory 'Root': 'C:\Test\actions-runner'
+[2023-07-12 07:26:30Z INFO HostContext] Well known config file 'RSACredentials': 'C:\Test\actions-runner\.credentials_rsaparams'
+[2023-07-12 07:26:30Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Test\actions-runner\.credentials_rsaparams
+[2023-07-12 07:26:30Z INFO MessageListener] Attempt to create session.
+[2023-07-12 07:26:30Z INFO MessageListener] Connecting to the Runner Server...
+[2023-07-12 07:26:30Z INFO RunnerServer] EstablishVssConnection
+[2023-07-12 07:26:30Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2023-07-12 07:26:30Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-12 07:26:30Z INFO RunnerServer] EstablishVssConnection
+[2023-07-12 07:26:30Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2023-07-12 07:26:30Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-12 07:26:30Z INFO RunnerServer] EstablishVssConnection
+[2023-07-12 07:26:30Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2023-07-12 07:26:30Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-12 07:26:30Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-12 07:26:31Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-12 07:26:31Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-12 07:26:31Z INFO MessageListener] VssConnection created
+[2023-07-12 07:26:31Z INFO Terminal] WRITE LINE: 
+[2023-07-12 07:26:31Z INFO Terminal] WRITE LINE: 
+[2023-07-12 07:26:31Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Test\actions-runner\.credentials_rsaparams
+[2023-07-12 07:26:31Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Test\actions-runner\.credentials_rsaparams
+[2023-07-12 07:26:32Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2023-07-12 07:26:32Z ERR  GitHubActionsService] POST request to https://pipelines.actions.githubusercontent.com/P5jhKlOA66ytK8yODlNmZhDVC0nW8GS9I4LCaUyN7hdifp9YPL/_apis/distributedtask/pools/1/sessions failed. HTTP Status: Conflict, AFD Ref: Ref A: DE5DC4F43F7F4E388AFAB3851B37D2A5 Ref B: BOM02EDGE0406 Ref C: 2023-07-12T07:26:32Z
+[2023-07-12 07:26:32Z ERR  MessageListener] Catch exception during create session.
+[2023-07-12 07:26:32Z ERR  MessageListener] GitHub.DistributedTask.WebApi.TaskAgentSessionConflictException: The actions runner self-hosted already has an active session for owner RUCHIR.
+   at GitHub.Services.WebApi.VssHttpClientBase.HandleResponseAsync(HttpResponseMessage response, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync(HttpRequestMessage message, HttpCompletionOption completionOption, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpRequestMessage message, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpMethod method, IEnumerable`1 additionalHeaders, Guid locationId, Object routeValues, ApiResourceVersion version, HttpContent content, IEnumerable`1 queryParameters, Object userState, CancellationToken cancellationToken)
+   at GitHub.Runner.Listener.MessageListener.CreateSessionAsync(CancellationToken token)
+[2023-07-12 07:26:32Z INFO MessageListener] The session for this runner already exists.
+[2023-07-12 07:26:32Z ERR  Terminal] WRITE ERROR: A session for this runner already exists.
+[2023-07-12 07:26:32Z INFO MessageListener] The session conflict exception haven't reached retry limit.
+[2023-07-12 07:26:32Z ERR  Terminal] WRITE ERROR: 2023-07-12 07:26:32Z: Runner connect error: The actions runner self-hosted already has an active session for owner RUCHIR.. Retrying until reconnected.
+[2023-07-12 07:26:32Z INFO MessageListener] Sleeping for 30 seconds before retrying.
+[2023-07-12 07:27:02Z INFO MessageListener] Attempt to create session.
+[2023-07-12 07:27:02Z INFO MessageListener] Connecting to the Runner Server...
+[2023-07-12 07:27:02Z INFO RunnerServer] EstablishVssConnection
+[2023-07-12 07:27:02Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2023-07-12 07:27:02Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-12 07:27:02Z INFO RunnerServer] EstablishVssConnection
+[2023-07-12 07:27:02Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2023-07-12 07:27:02Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-12 07:27:02Z INFO RunnerServer] EstablishVssConnection
+[2023-07-12 07:27:02Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2023-07-12 07:27:02Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-12 07:27:02Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-12 07:27:02Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-12 07:27:03Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-12 07:27:03Z INFO MessageListener] VssConnection created
+[2023-07-12 07:27:03Z INFO Terminal] WRITE LINE: 
+[2023-07-12 07:27:03Z INFO Terminal] WRITE LINE: 
+[2023-07-12 07:27:03Z ERR  GitHubActionsService] POST request to https://pipelines.actions.githubusercontent.com/P5jhKlOA66ytK8yODlNmZhDVC0nW8GS9I4LCaUyN7hdifp9YPL/_apis/distributedtask/pools/1/sessions failed. HTTP Status: Conflict, AFD Ref: Ref A: A6152791FD824C3D94EC35892C662646 Ref B: BOM02EDGE0617 Ref C: 2023-07-12T07:27:03Z
+[2023-07-12 07:27:03Z ERR  MessageListener] Catch exception during create session.
+[2023-07-12 07:27:03Z ERR  MessageListener] GitHub.DistributedTask.WebApi.TaskAgentSessionConflictException: The actions runner self-hosted already has an active session for owner RUCHIR.
+   at GitHub.Services.WebApi.VssHttpClientBase.HandleResponseAsync(HttpResponseMessage response, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync(HttpRequestMessage message, HttpCompletionOption completionOption, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpRequestMessage message, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpMethod method, IEnumerable`1 additionalHeaders, Guid locationId, Object routeValues, ApiResourceVersion version, HttpContent content, IEnumerable`1 queryParameters, Object userState, CancellationToken cancellationToken)
+   at GitHub.Runner.Listener.MessageListener.CreateSessionAsync(CancellationToken token)
+[2023-07-12 07:27:03Z INFO MessageListener] The session for this runner already exists.
+[2023-07-12 07:27:03Z ERR  Terminal] WRITE ERROR: A session for this runner already exists.
+[2023-07-12 07:27:03Z INFO MessageListener] The session conflict exception haven't reached retry limit.
+[2023-07-12 07:27:03Z INFO MessageListener] Sleeping for 30 seconds before retrying.
+[2023-07-12 07:27:33Z INFO MessageListener] Attempt to create session.
+[2023-07-12 07:27:33Z INFO MessageListener] Connecting to the Runner Server...
+[2023-07-12 07:27:33Z INFO RunnerServer] EstablishVssConnection
+[2023-07-12 07:27:33Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2023-07-12 07:27:33Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-12 07:27:33Z INFO RunnerServer] EstablishVssConnection
+[2023-07-12 07:27:33Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2023-07-12 07:27:33Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-12 07:27:33Z INFO RunnerServer] EstablishVssConnection
+[2023-07-12 07:27:33Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2023-07-12 07:27:33Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-12 07:27:33Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-12 07:27:33Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-12 07:27:34Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-12 07:27:34Z INFO MessageListener] VssConnection created
+[2023-07-12 07:27:34Z INFO Terminal] WRITE LINE: 
+[2023-07-12 07:27:34Z INFO Terminal] WRITE LINE: 
+[2023-07-12 07:27:34Z ERR  GitHubActionsService] POST request to https://pipelines.actions.githubusercontent.com/P5jhKlOA66ytK8yODlNmZhDVC0nW8GS9I4LCaUyN7hdifp9YPL/_apis/distributedtask/pools/1/sessions failed. HTTP Status: Conflict, AFD Ref: Ref A: 3301D48FA957493ABF89848131F1CD6E Ref B: BOM02EDGE0506 Ref C: 2023-07-12T07:27:34Z
+[2023-07-12 07:27:34Z ERR  MessageListener] Catch exception during create session.
+[2023-07-12 07:27:34Z ERR  MessageListener] GitHub.DistributedTask.WebApi.TaskAgentSessionConflictException: The actions runner self-hosted already has an active session for owner RUCHIR.
+   at GitHub.Services.WebApi.VssHttpClientBase.HandleResponseAsync(HttpResponseMessage response, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync(HttpRequestMessage message, HttpCompletionOption completionOption, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpRequestMessage message, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpMethod method, IEnumerable`1 additionalHeaders, Guid locationId, Object routeValues, ApiResourceVersion version, HttpContent content, IEnumerable`1 queryParameters, Object userState, CancellationToken cancellationToken)
+   at GitHub.Runner.Listener.MessageListener.CreateSessionAsync(CancellationToken token)
+[2023-07-12 07:27:34Z INFO MessageListener] The session for this runner already exists.
+[2023-07-12 07:27:34Z ERR  Terminal] WRITE ERROR: A session for this runner already exists.
+[2023-07-12 07:27:34Z INFO MessageListener] The session conflict exception haven't reached retry limit.
+[2023-07-12 07:27:34Z INFO MessageListener] Sleeping for 30 seconds before retrying.
+[2023-07-12 07:28:04Z INFO MessageListener] Attempt to create session.
+[2023-07-12 07:28:04Z INFO MessageListener] Connecting to the Runner Server...
+[2023-07-12 07:28:04Z INFO RunnerServer] EstablishVssConnection
+[2023-07-12 07:28:04Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2023-07-12 07:28:04Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-12 07:28:04Z INFO RunnerServer] EstablishVssConnection
+[2023-07-12 07:28:04Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2023-07-12 07:28:04Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-12 07:28:04Z INFO RunnerServer] EstablishVssConnection
+[2023-07-12 07:28:04Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2023-07-12 07:28:04Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-12 07:28:04Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-12 07:28:04Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-12 07:28:04Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-12 07:28:04Z INFO MessageListener] VssConnection created
+[2023-07-12 07:28:04Z INFO Terminal] WRITE LINE: 
+[2023-07-12 07:28:04Z INFO Terminal] WRITE LINE: 
+[2023-07-12 07:28:05Z ERR  GitHubActionsService] POST request to https://pipelines.actions.githubusercontent.com/P5jhKlOA66ytK8yODlNmZhDVC0nW8GS9I4LCaUyN7hdifp9YPL/_apis/distributedtask/pools/1/sessions failed. HTTP Status: Conflict, AFD Ref: Ref A: 27FF25C93DFC499F8D76132B482A9177 Ref B: BOM02EDGE0609 Ref C: 2023-07-12T07:28:05Z
+[2023-07-12 07:28:05Z ERR  MessageListener] Catch exception during create session.
+[2023-07-12 07:28:05Z ERR  MessageListener] GitHub.DistributedTask.WebApi.TaskAgentSessionConflictException: The actions runner self-hosted already has an active session for owner RUCHIR.
+   at GitHub.Services.WebApi.VssHttpClientBase.HandleResponseAsync(HttpResponseMessage response, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync(HttpRequestMessage message, HttpCompletionOption completionOption, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpRequestMessage message, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpMethod method, IEnumerable`1 additionalHeaders, Guid locationId, Object routeValues, ApiResourceVersion version, HttpContent content, IEnumerable`1 queryParameters, Object userState, CancellationToken cancellationToken)
+   at GitHub.Runner.Listener.MessageListener.CreateSessionAsync(CancellationToken token)
+[2023-07-12 07:28:05Z INFO MessageListener] The session for this runner already exists.
+[2023-07-12 07:28:05Z ERR  Terminal] WRITE ERROR: A session for this runner already exists.
+[2023-07-12 07:28:05Z INFO MessageListener] The session conflict exception haven't reached retry limit.
+[2023-07-12 07:28:05Z INFO MessageListener] Sleeping for 30 seconds before retrying.
+[2023-07-12 07:28:35Z INFO MessageListener] Attempt to create session.
+[2023-07-12 07:28:35Z INFO MessageListener] Connecting to the Runner Server...
+[2023-07-12 07:28:35Z INFO RunnerServer] EstablishVssConnection
+[2023-07-12 07:28:35Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2023-07-12 07:28:35Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-12 07:28:35Z INFO RunnerServer] EstablishVssConnection
+[2023-07-12 07:28:35Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2023-07-12 07:28:35Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-12 07:28:35Z INFO RunnerServer] EstablishVssConnection
+[2023-07-12 07:28:35Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2023-07-12 07:28:35Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-12 07:28:36Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-12 07:28:36Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-12 07:28:36Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-12 07:28:36Z INFO MessageListener] VssConnection created
+[2023-07-12 07:28:36Z INFO Terminal] WRITE LINE: 
+[2023-07-12 07:28:36Z INFO Terminal] WRITE LINE: 
+[2023-07-12 07:28:36Z ERR  GitHubActionsService] POST request to https://pipelines.actions.githubusercontent.com/P5jhKlOA66ytK8yODlNmZhDVC0nW8GS9I4LCaUyN7hdifp9YPL/_apis/distributedtask/pools/1/sessions failed. HTTP Status: Conflict, AFD Ref: Ref A: 7A42E4C683D94F0D888A6571CEE8D208 Ref B: BOM02EDGE0619 Ref C: 2023-07-12T07:28:36Z
+[2023-07-12 07:28:36Z ERR  MessageListener] Catch exception during create session.
+[2023-07-12 07:28:36Z ERR  MessageListener] GitHub.DistributedTask.WebApi.TaskAgentSessionConflictException: The actions runner self-hosted already has an active session for owner RUCHIR.
+   at GitHub.Services.WebApi.VssHttpClientBase.HandleResponseAsync(HttpResponseMessage response, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync(HttpRequestMessage message, HttpCompletionOption completionOption, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpRequestMessage message, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpMethod method, IEnumerable`1 additionalHeaders, Guid locationId, Object routeValues, ApiResourceVersion version, HttpContent content, IEnumerable`1 queryParameters, Object userState, CancellationToken cancellationToken)
+   at GitHub.Runner.Listener.MessageListener.CreateSessionAsync(CancellationToken token)
+[2023-07-12 07:28:36Z INFO MessageListener] The session for this runner already exists.
+[2023-07-12 07:28:36Z ERR  Terminal] WRITE ERROR: A session for this runner already exists.
+[2023-07-12 07:28:36Z INFO MessageListener] The session conflict exception haven't reached retry limit.
+[2023-07-12 07:28:36Z INFO MessageListener] Sleeping for 30 seconds before retrying.
+[2023-07-12 07:29:06Z INFO MessageListener] Attempt to create session.
+[2023-07-12 07:29:06Z INFO MessageListener] Connecting to the Runner Server...
+[2023-07-12 07:29:06Z INFO RunnerServer] EstablishVssConnection
+[2023-07-12 07:29:06Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2023-07-12 07:29:06Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-12 07:29:06Z INFO RunnerServer] EstablishVssConnection
+[2023-07-12 07:29:06Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2023-07-12 07:29:06Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-12 07:29:06Z INFO RunnerServer] EstablishVssConnection
+[2023-07-12 07:29:06Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2023-07-12 07:29:06Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-12 07:29:06Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-12 07:29:07Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-12 07:29:07Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-12 07:29:07Z INFO MessageListener] VssConnection created
+[2023-07-12 07:29:07Z INFO Terminal] WRITE LINE: 
+[2023-07-12 07:29:07Z INFO Terminal] WRITE LINE: 
+[2023-07-12 07:29:07Z ERR  GitHubActionsService] POST request to https://pipelines.actions.githubusercontent.com/P5jhKlOA66ytK8yODlNmZhDVC0nW8GS9I4LCaUyN7hdifp9YPL/_apis/distributedtask/pools/1/sessions failed. HTTP Status: Conflict, AFD Ref: Ref A: 79304E7E54A44C759238AF0547198334 Ref B: BOM02EDGE0721 Ref C: 2023-07-12T07:29:07Z
+[2023-07-12 07:29:07Z ERR  MessageListener] Catch exception during create session.
+[2023-07-12 07:29:07Z ERR  MessageListener] GitHub.DistributedTask.WebApi.TaskAgentSessionConflictException: The actions runner self-hosted already has an active session for owner RUCHIR.
+   at GitHub.Services.WebApi.VssHttpClientBase.HandleResponseAsync(HttpResponseMessage response, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync(HttpRequestMessage message, HttpCompletionOption completionOption, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpRequestMessage message, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpMethod method, IEnumerable`1 additionalHeaders, Guid locationId, Object routeValues, ApiResourceVersion version, HttpContent content, IEnumerable`1 queryParameters, Object userState, CancellationToken cancellationToken)
+   at GitHub.Runner.Listener.MessageListener.CreateSessionAsync(CancellationToken token)
+[2023-07-12 07:29:07Z INFO MessageListener] The session for this runner already exists.
+[2023-07-12 07:29:07Z ERR  Terminal] WRITE ERROR: A session for this runner already exists.
+[2023-07-12 07:29:07Z INFO MessageListener] The session conflict exception haven't reached retry limit.
+[2023-07-12 07:29:07Z INFO MessageListener] Sleeping for 30 seconds before retrying.
+[2023-07-12 07:29:37Z INFO MessageListener] Attempt to create session.
+[2023-07-12 07:29:37Z INFO MessageListener] Connecting to the Runner Server...
+[2023-07-12 07:29:37Z INFO RunnerServer] EstablishVssConnection
+[2023-07-12 07:29:37Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2023-07-12 07:29:37Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-12 07:29:37Z INFO RunnerServer] EstablishVssConnection
+[2023-07-12 07:29:37Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2023-07-12 07:29:37Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-12 07:29:37Z INFO RunnerServer] EstablishVssConnection
+[2023-07-12 07:29:37Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2023-07-12 07:29:37Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-12 07:29:38Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-12 07:29:38Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-12 07:29:38Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-12 07:29:38Z INFO MessageListener] VssConnection created
+[2023-07-12 07:29:38Z INFO Terminal] WRITE LINE: 
+[2023-07-12 07:29:38Z INFO Terminal] WRITE LINE: 
+[2023-07-12 07:29:38Z ERR  GitHubActionsService] POST request to https://pipelines.actions.githubusercontent.com/P5jhKlOA66ytK8yODlNmZhDVC0nW8GS9I4LCaUyN7hdifp9YPL/_apis/distributedtask/pools/1/sessions failed. HTTP Status: Conflict, AFD Ref: Ref A: C561DFD2A84B454F847F741B2909E480 Ref B: BOM02EDGE0506 Ref C: 2023-07-12T07:29:39Z
+[2023-07-12 07:29:38Z ERR  MessageListener] Catch exception during create session.
+[2023-07-12 07:29:38Z ERR  MessageListener] GitHub.DistributedTask.WebApi.TaskAgentSessionConflictException: The actions runner self-hosted already has an active session for owner RUCHIR.
+   at GitHub.Services.WebApi.VssHttpClientBase.HandleResponseAsync(HttpResponseMessage response, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync(HttpRequestMessage message, HttpCompletionOption completionOption, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpRequestMessage message, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpMethod method, IEnumerable`1 additionalHeaders, Guid locationId, Object routeValues, ApiResourceVersion version, HttpContent content, IEnumerable`1 queryParameters, Object userState, CancellationToken cancellationToken)
+   at GitHub.Runner.Listener.MessageListener.CreateSessionAsync(CancellationToken token)
+[2023-07-12 07:29:38Z INFO MessageListener] The session for this runner already exists.
+[2023-07-12 07:29:38Z ERR  Terminal] WRITE ERROR: A session for this runner already exists.
+[2023-07-12 07:29:38Z INFO MessageListener] The session conflict exception haven't reached retry limit.
+[2023-07-12 07:29:38Z INFO MessageListener] Sleeping for 30 seconds before retrying.
+[2023-07-12 07:30:08Z INFO MessageListener] Attempt to create session.
+[2023-07-12 07:30:08Z INFO MessageListener] Connecting to the Runner Server...
+[2023-07-12 07:30:08Z INFO RunnerServer] EstablishVssConnection
+[2023-07-12 07:30:08Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2023-07-12 07:30:08Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-12 07:30:08Z INFO RunnerServer] EstablishVssConnection
+[2023-07-12 07:30:08Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2023-07-12 07:30:08Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-12 07:30:08Z INFO RunnerServer] EstablishVssConnection
+[2023-07-12 07:30:08Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2023-07-12 07:30:08Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-07-12 07:30:09Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-12 07:30:09Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-12 07:30:09Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-07-12 07:30:09Z INFO MessageListener] VssConnection created
+[2023-07-12 07:30:09Z INFO Terminal] WRITE LINE: 
+[2023-07-12 07:30:09Z INFO Terminal] WRITE LINE: 
+[2023-07-12 07:30:10Z ERR  GitHubActionsService] POST request to https://pipelines.actions.githubusercontent.com/P5jhKlOA66ytK8yODlNmZhDVC0nW8GS9I4LCaUyN7hdifp9YPL/_apis/distributedtask/pools/1/sessions failed. HTTP Status: Conflict, AFD Ref: Ref A: 269C99257915444EA60E78BCB3C7A200 Ref B: BOM02EDGE0421 Ref C: 2023-07-12T07:30:10Z
+[2023-07-12 07:30:10Z ERR  MessageListener] Catch exception during create session.
+[2023-07-12 07:30:10Z ERR  MessageListener] GitHub.DistributedTask.WebApi.TaskAgentSessionConflictException: The actions runner self-hosted already has an active session for owner RUCHIR.
+   at GitHub.Services.WebApi.VssHttpClientBase.HandleResponseAsync(HttpResponseMessage response, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync(HttpRequestMessage message, HttpCompletionOption completionOption, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpRequestMessage message, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpMethod method, IEnumerable`1 additionalHeaders, Guid locationId, Object routeValues, ApiResourceVersion version, HttpContent content, IEnumerable`1 queryParameters, Object userState, CancellationToken cancellationToken)
+   at GitHub.Runner.Listener.MessageListener.CreateSessionAsync(CancellationToken token)
+[2023-07-12 07:30:10Z INFO MessageListener] The session for this runner already exists.
+[2023-07-12 07:30:10Z ERR  Terminal] WRITE ERROR: A session for this runner already exists.
+[2023-07-12 07:30:10Z INFO MessageListener] The session conflict exception have reached retry limit.
+[2023-07-12 07:30:10Z ERR  Terminal] WRITE ERROR: Stop retry on SessionConflictException after retried for 240 seconds.
+[2023-07-12 07:30:10Z ERR  Terminal] WRITE ERROR: Failed to create session. The actions runner self-hosted already has an active session for owner RUCHIR.
+[2023-07-12 07:30:10Z INFO Listener] Runner execution has finished with return code 1
