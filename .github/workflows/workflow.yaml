@@ -1,20 +1,13 @@
-name: Sync S3 with GitHub
+name: Sync S3 with GitHub (Integ)
 
 on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:  # Add workflow_dispatch event for manual triggering
-    inputs:
-      environment:
-        description: 'Environment for Terraform'
-        required: true
+  workflow_dispatch:
 
 jobs:
   sync:
     runs-on: ubuntu-latest
 
-    if: github.event_name == 'workflow_dispatch' || startsWith(github.event.inputs.environment, 'prod')
+    if: github.event_name == 'workflow_dispatch'
 
     steps:
       - name: Checkout code
@@ -24,7 +17,7 @@ jobs:
         run: |
           pip install awscli
 
-      - name: Sync .py files with S3
+      - name: Sync .py files with S3 (Integ)
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
